@@ -1,0 +1,2703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taller: Derecho Laboral y Capital Humano </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/poppins@5.0.0/index.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+  body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: #333; }
+  
+  .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+  
+  header {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+  
+  header p { color: #666; font-size: 1.1em; }
+  
+  .nav-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tab-btn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.9);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .tab-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  .tab-btn.active { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+  
+  .module {
+    display: none;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    animation: fadeIn 0.5s;
+  }
+  
+  .module.active { display: block; }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .module h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-left: 5px solid #667eea;
+    padding-left: 15px;
+  }
+  
+  .module h3 {
+    color: #667eea;
+    margin: 25px 0 15px;
+    font-size: 1.4em;
+  }
+  
+  .theory-box {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf3 100%);
+    border-left: 5px solid #667eea;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .theory-box h4 { color: #764ba2; margin-bottom: 10px; }
+  .theory-box p, .theory-box li { line-height: 1.7; margin-bottom: 8px; }
+  
+  .illustration {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  
+  .illustration-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .illustration-caption {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    font-size: 0.9em;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  th {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  tr:hover { background: #f5f7fa; }
+  
+  .exercise-card {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%);
+    border: 2px solid #ffb347;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    position: relative;
+  }
+  
+  .exercise-card::before {
+    content: "🎯";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-size: 2em;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+  }
+  
+  .scenario {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 4px solid #667eea;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  }
+  
+  .scenario-text { font-weight: 500; margin-bottom: 10px; }
+  
+  .answer-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .answer-btn {
+    padding: 8px 15px;
+    border: 2px solid #667eea;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9em;
+  }
+  
+  .answer-btn:hover { background: #667eea; color: white; }
+  .answer-btn.correct { background: #4CAF50; color: white; border-color: #4CAF50; }
+  .answer-btn.wrong { background: #f44336; color: white; border-color: #f44336; }
+  
+  .feedback {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+  }
+  
+  .feedback.show { display: block; }
+  .feedback.correct { background: #e8f5e9; color: #2e7d32; }
+  .feedback.wrong { background: #ffebee; color: #c62828; }
+  
+  .progress-bar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    height: 20px;
+    margin: 20px 0;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    height: 100%;
+    transition: width 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+  }
+  
+  .score-display {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+  }
+  
+  .input-group {
+    margin: 15px 0;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #764ba2;
+  }
+  
+  .input-group input, .input-group select, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s;
+    margin: 10px 5px;
+  }
+  
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(102,126,234,0.4); }
+  
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #667eea, #764ba2);
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .timeline-item:nth-child(odd) { margin-left: 5%; }
+  .timeline-item:nth-child(even) { margin-left: 50%; }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #667eea;
+    border-radius: 50%;
+    top: 30px;
+  }
+  
+  .timeline-item:nth-child(odd)::before { right: -12%; }
+  .timeline-item:nth-child(even)::before { left: -12%; }
+  
+  .timeline-item h4 { color: #764ba2; margin-bottom: 10px; }
+  
+  .calculator {
+    background: linear-gradient(135deg, #f5f7fa, #e8ecf3);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+  }
+  
+  .calc-result {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border-left: 4px solid #4CAF50;
+    display: none;
+  }
+  
+  .calc-result.show { display: block; animation: fadeIn 0.5s; }
+  
+  .highlight {
+    background: linear-gradient(120deg, #ffe8cc 0%, #ffe8cc 100%);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  .concept-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid #667eea;
+  }
+  
+  .concept-card h4 { color: #764ba2; margin-bottom: 10px; }
+  
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-2, .grid-4 { grid-template-columns: 1fr; }
+    .timeline::before { left: 20px; }
+    .timeline-item { width: 80%; margin-left: 40px !important; }
+    .timeline-item::before { left: -30px !important; right: auto !important; }
+    header h1 { font-size: 1.8em; }
+  }
+  
+  .svg-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .svg-container svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 2px;
+  }
+  
+  .badge-blue { background: #e3f2fd; color: #1976d2; }
+  .badge-green { background: #e8f5e9; color: #388e3c; }
+  .badge-orange { background: #fff3e0; color: #f57c00; }
+  .badge-red { background: #ffebee; color: #d32f2f; }
+  
+  .quiz-container {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+  }
+  
+  .quiz-question {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2e7d32;
+  }
+  
+  .definition-box {
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+    border-left: 5px solid #ff9800;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+  
+  .definition-box strong { color: #e65100; }
+  
+  .illustration-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-top: 5px solid;
+    overflow: hidden;
+  }
+  
+  .illustration-card.comunalismo { border-color: #4CAF50; }
+  .illustration-card.esclavismo { border-color: #f44336; }
+  .illustration-card.feudalismo { border-color: #FF9800; }
+  .illustration-card.capitalismo { border-color: #2196F3; }
+  
+  .illustration-card h4 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .illustration-card .svg-illustration {
+    width: 100%;
+    max-width: 900px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  
+  .stats-section {
+    background: linear-gradient(135deg, #2c3e50, #4a5568);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px 0;
+  }
+  
+  .stats-section h3 {
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .stat-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.15);
+  }
+  
+  .stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .stat-label {
+    font-size: 0.95em;
+    opacity: 0.9;
+    margin-bottom: 10px;
+  }
+  
+  .stat-description {
+    font-size: 0.85em;
+    opacity: 0.75;
+    font-style: italic;
+  }
+  
+  .modern-equivalence {
+    background: white;
+    color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+  
+  .modern-equivalence h4 {
+    color: #764ba2;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+  }
+  
+  .equivalence-row {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin: 8px 0;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+  }
+  
+  .equivalence-icon {
+    font-size: 2em;
+    margin-right: 15px;
+  }
+  
+  .equivalence-content {
+    flex: 1;
+  }
+  
+  .equivalence-content strong {
+    color: #764ba2;
+  }
+  
+  .pie-chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  
+  .pie-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+  
+  .source-note {
+    font-size: 0.8em;
+    opacity: 0.7;
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+  }
+  
+  .warning-box {
+    background: linear-gradient(135deg, #ffebee, #ffcdd2);
+    border-left: 5px solid #f44336;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .warning-box strong { color: #c62828; }
+  
+  .success-box {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-left: 5px solid #4CAF50;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .success-box strong { color: #2e7d32; }
+
+  .scene-description {
+    background: linear-gradient(135deg, #f5f7fa, #e8ecf3);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    border-left: 4px solid;
+  }
+  
+  .scene-description.comunalismo { border-color: #4CAF50; }
+  .scene-description.esclavismo { border-color: #f44336; }
+  .scene-description.feudalismo { border-color: #FF9800; }
+  .scene-description.capitalismo { border-color: #2196F3; }
+  
+  .scene-description h5 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .scene-description ul {
+    margin-left: 20px;
+    line-height: 1.8;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🎓 Taller: Derecho Laboral y Capital Humano</h1>
+    <p>Aprende sobre tus derechos, contratos y la realidad del mundo laboral 💼</p>
+    <p style="margin-top:10px; font-size:0.9em;">📚 4 Módulos Interactivos para jóvenes de 15 a 17 años</p>
+  </header>
+
+  <div class="nav-tabs">
+    <button class="tab-btn active" onclick="showModule(1)">📋 Módulo 1: Contratos</button>
+    <button class="tab-btn" onclick="showModule(2)">💰 Módulo 2: Nómina</button>
+    <button class="tab-btn" onclick="showModule(3)">️ Módulo 3: Equilibrio</button>
+    <button class="tab-btn" onclick="showModule(4)">📜 Módulo 4: Historia</button>
+  </div>
+
+  <!-- MÓDULO 1 -->
+  <div class="module active" id="module1">
+    <h2>Módulo 1: La Arquitectura del Trabajo Digno</h2>
+    <p style="font-size:1.1em; color:#666; margin-bottom:20px;">Sistematización Legal y el Contrato Realidad 🏛️</p>
+
+    <div class="svg-container">
+      <svg width="600" height="400" viewBox="0 0 600 400">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <polygon points="300,50 550,350 50,350" fill="url(#grad1)" opacity="0.3" stroke="#667eea" stroke-width="3"/>
+        <text x="300" y="40" text-anchor="middle" font-size="18" font-weight="bold" fill="#764ba2"> REALIDAD > FORMA</text>
+        <text x="300" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="white">CONSTITUCIÓN</text>
+        <text x="300" y="180" text-anchor="middle" font-size="14" font-weight="bold" fill="white">LEYES LABORALES</text>
+        <text x="300" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="white">CONTRATOS</text>
+        <text x="300" y="300" text-anchor="middle" font-size="14" font-weight="bold" fill="white">CONDICIONES REALES</text>
+        <text x="300" y="380" text-anchor="middle" font-size="12" fill="#666">La verdad siempre prevalece</text>
+      </svg>
+    </div>
+
+    <h3> Los Axiomas de la Relación Laboral</h3>
+    <div class="theory-box">
+      <h4>💡 La Regla de Oro</h4>
+      <p>Un contrato de trabajo existe cuando se cumplen <span class="highlight">TRES elementos</span>, sin importar el nombre del papel que firmes:</p>
+      <ol style="margin-left:20px; margin-top:10px;">
+        <li><strong> Prestación personal del servicio:</strong> TÚ haces el trabajo (no puedes mandar a otro en tu lugar).</li>
+        <li><strong>⏰ Subordinación continua:</strong> Alguien te dice cuándo, cómo y dónde trabajar.</li>
+        <li><strong>💵 Salario:</strong> Te pagan por ese trabajo.</li>
+      </ol>
+      <p style="margin-top:15px;"><strong>💡 Si los 3 existen = ¡Contrato Realidad!</strong> Aunque hayas firmado "prestación de servicios".</p>
+    </div>
+
+    <h3>📝 Tipos de Contratos</h3>
+    <div class="grid-2">
+      <div class="concept-card">
+        <h4>📄 Término Indefinido</h4>
+        <p>La regla general. No tiene fecha de fin. Para terminarlo se necesita justa causa o pagar indemnización. <span class="badge badge-green">Máxima estabilidad</span></p>
+      </div>
+      <div class="concept-card">
+        <h4>📅 Término Fijo</h4>
+        <p>Solo para trabajos temporales. Tiene fecha de inicio y fin. No se puede renovar infinitamente para evadir la estabilidad.</p>
+      </div>
+      <div class="concept-card">
+        <h4>🏗️ Obra o Labor</h4>
+        <p>Termina cuando se acaba la tarea específica (ej: construir un muro, desarrollar un software). Debe describir la obra con detalle.</p>
+      </div>
+      <div class="concept-card">
+        <h4> Aprendizaje (SENA)</h4>
+        <p>Vínculo formativo. Recibes "auxilio de sostenimiento", no salario. La empresa paga tu salud, pero no prestaciones sociales completas.</p>
+      </div>
+      <div class="concept-card">
+        <h4>🤝 Prestación de Servicios</h4>
+        <p>Contrato civil para expertos independientes. <strong>SIN subordinación ni horario.</strong> Si te imponen horario = ¡FRAUDE LABORAL!</p>
+      </div>
+      <div class="concept-card">
+        <h4>⚠️ Contrato Realidad</h4>
+        <p>La figura que te protege: si en la práctica cumples los 3 elementos, tienes TODOS los derechos laborales, sin importar el papel.</p>
+      </div>
+    </div>
+
+    <h3>🎯 Definiciones Clave</h3>
+    <div class="definition-box">
+      <strong>1. Subordinación:</strong> El jefe puede dirigirte, imponer horarios, exigir cumplimiento y sancionarte. Es la línea roja que separa un contrato laboral de uno civil.
+    </div>
+    <div class="definition-box">
+      <strong>2. Salario vs. Auxilio:</strong> El salario es pago por trabajo subordinado. El auxilio es para manutención del aprendiz. ¡No los confundas!
+    </div>
+    <div class="definition-box">
+      <strong>3. Prestaciones Sociales:</strong> Cesantías, intereses, prima y vacaciones. NO son "bonos" opcionales; son tu patrimonio protegido por ley.
+    </div>
+    <div class="definition-box">
+      <strong>4. Contrato Realidad:</strong> Reconoce todos tus derechos cuando en la práctica existen los 3 elementos, sin importar el documento firmado.
+    </div>
+
+    <h3>📊 Matriz de Obligaciones</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de Contrato</th>
+          <th>Subordinación</th>
+          <th>Remuneración</th>
+          <th>Seguridad Social</th>
+          <th>Prestaciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Término Indefinido/Fijo</strong></td>
+          <td>Absoluta</td>
+          <td>Salario Integral/Ordinario</td>
+          <td>Plena (Salud, Pensión, ARL, Caja)</td>
+          <td>Plenas (Cesantías, Prima, Vacaciones)</td>
+        </tr>
+        <tr>
+          <td><strong>Obra o Labor</strong></td>
+          <td>Absoluta</td>
+          <td>Salario Ordinario</td>
+          <td>Plena</td>
+          <td>Plenas (Proporcionales)</td>
+        </tr>
+        <tr>
+          <td><strong>Aprendizaje (SENA)</strong></td>
+          <td>Formativa</td>
+          <td>Auxilio de Sostenimiento</td>
+          <td>Salud (Aprendiz) / ARL (Empresa)</td>
+          <td>Ninguna (Es formación)</td>
+        </tr>
+        <tr>
+          <td><strong>Prestación de Servicios</strong></td>
+          <td>Nula (Autonomía)</td>
+          <td>Honorarios</td>
+          <td>Solo Pensión y Salud (si > 1 SMMLV)</td>
+          <td>Ninguna</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>🎮 Ejercicio Interactivo: ¿Contrato Realidad o No?</h3>
+    <p style="margin-bottom:15px;">Analiza cada situación y decide cuál es la verdadera naturaleza jurídica:</p>
+    
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress1" style="width:0%">0%</div>
+    </div>
+
+    <div id="scenarios-container"></div>
+
+    <div class="score-display" id="score1" style="display:none;">
+      <h3>🏆 Tu Puntuación</h3>
+      <p id="score-text"></p>
+      <button class="btn-primary" onclick="resetQuiz1()">🔄 Reintentar</button>
+    </div>
+  </div>
+
+  <!-- MÓDULO 2 -->
+  <div class="module" id="module2">
+    <h2>Módulo 2: La Traducción Financiera del Capital Humano</h2>
+    <p style="font-size:1.1em; color:#666; margin-bottom:20px;">Sistematización Contable 💰</p>
+
+    <div class="svg-container">
+      <svg width="600" height="300" viewBox="0 0 600 300">
+        <defs>
+          <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8BC34A;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFC107;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <circle cx="300" cy="150" r="50" fill="#667eea"/>
+        <text x="300" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="white">ENERGÍA</text>
+        <text x="300" y="170" text-anchor="middle" font-size="14" font-weight="bold" fill="white">HUMANA</text>
+        <path d="M 250 150 Q 150 150 100 200" stroke="url(#grad2)" stroke-width="8" fill="none"/>
+        <path d="M 350 150 Q 450 150 500 200" stroke="url(#grad3)" stroke-width="8" fill="none"/>
+        <rect x="50" y="200" width="100" height="60" rx="10" fill="url(#grad2)"/>
+        <text x="100" y="235" text-anchor="middle" font-size="12" font-weight="bold" fill="white">INVENTARIO</text>
+        <text x="100" y="250" text-anchor="middle" font-size="10" fill="white">(COSTO)</text>
+        <rect x="450" y="200" width="100" height="60" rx="10" fill="url(#grad3)"/>
+        <text x="500" y="235" text-anchor="middle" font-size="12" font-weight="bold" fill="white">ESTRUCTURA</text>
+        <text x="500" y="250" text-anchor="middle" font-size="10" fill="white">(GASTO)</text>
+      </svg>
+    </div>
+
+    <h3>📖 El Principio de Asociación</h3>
+    <div class="theory-box">
+      <h4>💡 La Ecuación Madre</h4>
+      <p style="font-size:1.2em; text-align:center; padding:15px; background:white; border-radius:10px; margin:15px 0;">
+        <strong>Costo de Mano de Obra + Cargas Prestacionales = Valor Real del Capital Humano</strong>
+      </p>
+      <p>Todo peso pagado a un trabajador debe clasificarse según <span class="highlight">dónde trabaja</span>:</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="concept-card">
+        <h4>🏭 Costo de Producción</h4>
+        <p>Salario y prestaciones de quienes <strong>tocan el producto</strong> (operarios, supervisores de planta).</p>
+        <p style="margin-top:10px;">Se "capitaliza" en el Inventario y solo se convierte en Costo de Ventas cuando se vende el producto.</p>
+        <span class="badge badge-blue">MOD</span>
+        <span class="badge badge-blue">MOI/CIF</span>
+      </div>
+      <div class="concept-card">
+        <h4> Gasto Operativo</h4>
+        <p>Salario y prestaciones de quienes <strong>facilitan la operación</strong> (contadores, gerentes, vendedores).</p>
+        <p style="margin-top:10px;">Se consume en el período y va directo al Estado de Resultados.</p>
+        <span class="badge badge-orange">Gasto Ventas</span>
+        <span class="badge badge-orange">Gasto Admin</span>
+      </div>
+    </div>
+
+    <h3>🎯 Definiciones Quirúrgicas</h3>
+    <div class="definition-box">
+      <strong>1. Mano de Obra Directa (MOD):</strong> Personal de planta que transforma directamente la materia prima. Su costo es 100% Costo de Producción.
+    </div>
+    <div class="definition-box">
+      <strong>2. Mano de Obra Indirecta (MOI):</strong> Personal de planta que hace posible la producción (supervisores, mantenimiento). Su costo es Costo Indirecto de Fabricación (CIF).
+    </div>
+    <div class="definition-box">
+      <strong>3. Factor Prestacional:</strong> Por cada $100 de salario básico, la empresa debe aprovisionar ~50% adicional para prestaciones y seguridad social.
+    </div>
+    <div class="definition-box">
+      <strong>4. Gasto de Personal:</strong> Remuneración al personal administrativo, de ventas y dirección. Se carga directamente al Estado de Resultados.
+    </div>
+
+    <h3>📊 Matriz de Asignación Contable</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Concepto</th>
+          <th>Operario (MOD/MOI)</th>
+          <th>Vendedor</th>
+          <th>Gerente/Contador</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Salario Básico</td><td>Costo Producción</td><td>Gasto Ventas</td><td>Gasto Admin</td></tr>
+        <tr><td>Horas Extras</td><td>Costo Producción</td><td>Gasto Ventas</td><td>Gasto Admin</td></tr>
+        <tr><td>Cesantías e Intereses</td><td>CIF/MOD</td><td>Gasto Ventas</td><td>Gasto Admin</td></tr>
+        <tr><td>Prima de Servicios</td><td>CIF/MOD</td><td>Gasto Ventas</td><td>Gasto Admin</td></tr>
+        <tr><td>Aporte Salud/Pensión</td><td>Costo Producción</td><td>Gasto Ventas</td><td>Gasto Admin</td></tr>
+        <tr><td>ARL</td><td>Costo Producción</td><td>Gasto Ventas</td><td>Gasto Admin</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🎮 Ejercicio: Clasifica la Nómina</h3>
+    <p style="margin-bottom:15px;">Para cada concepto, selecciona su clasificación contable correcta:</p>
+    
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress2" style="width:0%">0%</div>
+    </div>
+
+    <div id="payroll-container"></div>
+
+    <div class="score-display" id="score2" style="display:none;">
+      <h3> Tu Puntuación</h3>
+      <p id="score-text2"></p>
+      <button class="btn-primary" onclick="resetQuiz2()">🔄 Reintentar</button>
+    </div>
+
+    <h3>🧮 Calculadora del Factor Prestacional</h3>
+    <div class="calculator">
+      <div class="input-group">
+        <label>💵 Salario Básico Mensual ($):</label>
+        <input type="number" id="salary" placeholder="Ej: 1300000" value="1300000">
+      </div>
+      <div class="input-group">
+        <label>📊 Factor Prestacional (%):</label>
+        <input type="number" id="factor" placeholder="Ej: 52" value="52" step="0.1">
+      </div>
+      <button class="btn-primary" onclick="calculatePrestacional()">Calcular Costo Real</button>
+      <div class="calc-result" id="calc-result">
+        <h4>📈 Resultado:</h4>
+        <p id="calc-output"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MÓDULO 3 -->
+  <div class="module" id="module3">
+    <h2>Módulo 3: Rentabilidad, Equilibrio e Impacto Social</h2>
+    <p style="font-size:1.1em; color:#666; margin-bottom:20px;">La Física del Punto de Equilibrio ️</p>
+
+    <div class="svg-container">
+      <svg width="600" height="400" viewBox="0 0 600 400">
+        <defs>
+          <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#f44336;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ff9800;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <line x1="50" y1="350" x2="550" y2="350" stroke="#333" stroke-width="2"/>
+        <line x1="50" y1="350" x2="50" y2="50" stroke="#333" stroke-width="2"/>
+        <text x="300" y="390" text-anchor="middle" font-size="14" font-weight="bold">Unidades Vendidas</text>
+        <text x="20" y="200" text-anchor="middle" font-size="14" font-weight="bold" transform="rotate(-90, 20, 200)">$ Pesos</text>
+        <line x1="50" y1="300" x2="550" y2="100" stroke="#4CAF50" stroke-width="3"/>
+        <line x1="50" y1="200" x2="550" y2="50" stroke="url(#grad4)" stroke-width="3" stroke-dasharray="5,5"/>
+        <circle cx="250" cy="200" r="8" fill="#f44336"/>
+        <circle cx="350" cy="150" r="8" fill="#4CAF50"/>
+        <text x="250" y="220" text-anchor="middle" font-size="11" fill="#f44336" font-weight="bold">PE Informal</text>
+        <text x="350" y="170" text-anchor="middle" font-size="11" fill="#4CAF50" font-weight="bold">PE Formal</text>
+        <text x="100" y="80" font-size="12" fill="#f44336">--- Costo Informal</text>
+        <text x="100" y="100" font-size="12" fill="#4CAF50">— Costo Formal</text>
+      </svg>
+    </div>
+
+    <h3>📖 La Geometría de la Formalización</h3>
+    <div class="theory-box">
+      <h4>️ El Costo de la Dignidad</h4>
+      <p>Al formalizar a un trabajador, los costos aumentan por las cargas prestacionales. Matemáticamente, esto <span class="highlight">desplaza el Punto de Equilibrio hacia la derecha</span>: la empresa necesita vender más para cubrir el "costo de la dignidad".</p>
+      <p style="margin-top:15px;"><strong>🚨 La Falsa Ventaja de la Informalidad:</strong> Una empresa informal muestra un PE artificialmente bajo y utilidades infladas. Pero es un <strong>pasivo contingente</strong>: si la auditan, las multas destruirán el patrimonio.</p>
+    </div>
+
+    <h3> Definiciones Clave</h3>
+    <div class="definition-box">
+      <strong>1. Punto de Equilibrio Formal (PEF):</strong> Nivel de ventas necesario para cubrir TODOS los costos, incluyendo carga prestacional y seguridad social al 100%.
+    </div>
+    <div class="definition-box">
+      <strong>2. Pasivo Contingente Laboral:</strong> La obligación financiera oculta por no pagar prestaciones, horas extras o seguridad social. Se revela en auditorías y destruye el patrimonio.
+    </div>
+    <div class="definition-box">
+      <strong>3. Productividad del Capital Humano:</strong> Relación entre el valor de la producción y el costo total de la nómina (incluyendo factor prestacional). La única forma sostenible de asumir la formalización.
+    </div>
+
+    <h3>🧮 Calculadora de Punto de Equilibrio</h3>
+    <div class="calculator">
+      <h4>📊 Escenario Dual: Formal vs. Informal</h4>
+      <div class="grid-2">
+        <div>
+          <div class="input-group">
+            <label>💵 Costos Fijos ($):</label>
+            <input type="number" id="fixedCosts" value="5000000">
+          </div>
+          <div class="input-group">
+            <label>📦 Costo Variable por Unidad ($):</label>
+            <input type="number" id="variableCost" value="50000">
+          </div>
+          <div class="input-group">
+            <label>💰 Precio de Venta por Unidad ($):</label>
+            <input type="number" id="price" value="100000">
+          </div>
+        </div>
+        <div>
+          <div class="input-group">
+            <label>📊 Factor Prestacional (%):</label>
+            <input type="number" id="prestacionalFactor" value="52" step="0.1">
+          </div>
+          <div class="input-group">
+            <label>👷 Empleados a Formalizar:</label>
+            <input type="number" id="employees" value="10">
+          </div>
+          <div class="input-group">
+            <label>💰 Salario Promedio por Empleado ($):</label>
+            <input type="number" id="avgSalary" value="1300000">
+          </div>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="calculatePE()">Calcular Punto de Equilibrio</button>
+      <div class="calc-result" id="pe-result">
+        <h4>📈 Resultados:</h4>
+        <div id="pe-output"></div>
+      </div>
+    </div>
+
+    <h3>🌳 Árboles de Impacto Socioeconómico</h3>
+    <p style="margin-bottom:15px;">Analiza cómo las decisiones afectan a todos los actores:</p>
+    
+    <div class="exercise-card">
+      <h4>📈 Escenario: Aumento del 10% del Salario Mínimo</h4>
+      <div class="timeline" style="margin-top:20px;">
+        <div class="timeline-item" style="width:80%; margin-left:10%;">
+          <h4>1️ Causa Inicial</h4>
+          <p>Aumento del 10% del Salario Mínimo Legal</p>
+        </div>
+        <div class="timeline-item" style="width:80%; margin-left:10%;">
+          <h4>2️⃣ Efecto en Costos</h4>
+          <p>Aumento de Costos Variables (MOD) y Fijos (Admin)</p>
+        </div>
+        <div class="timeline-item" style="width:80%; margin-left:10%;">
+          <h4>3️⃣ Desplazamiento del PE</h4>
+          <p>El Punto de Equilibrio se mueve a la derecha → Se necesita vender más</p>
+        </div>
+        <div class="timeline-item" style="width:80%; margin-left:10%;">
+          <h4>4️⃣ Decisión Gerencial</h4>
+          <p>¿Subir precio o reducir planta?</p>
+        </div>
+        <div class="timeline-item" style="width:80%; margin-left:10%;">
+          <h4>5️⃣ Consecuencia Social</h4>
+          <p>Inflación de productos básicos o desempleo estructural</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>🎮 Ejercicio: Impacto Socioeconómico</h3>
+    <p style="margin-bottom:15px;">Selecciona las consecuencias correctas de cada escenario:</p>
+    
+    <div id="impact-container"></div>
+  </div>
+
+  <!-- MÓDULO 4 -->
+  <div class="module" id="module4">
+    <h2>Módulo 4: Historia del Trabajo y las Fuerzas Productivas</h2>
+    <p style="font-size:1.1em; color:#666; margin-bottom:20px;">De la comunidad al capitalismo 📜</p>
+
+    <div class="theory-box">
+      <h4>🌍 La Evolución del Trabajo</h4>
+      <p>A lo largo de la historia, la forma en que los humanos nos organizamos para producir ha cambiado radicalmente. Cada sistema tiene sus propios actores, relaciones de poder y formas de explotación o cooperación.</p>
+    </div>
+
+    <h3>📜 Línea de Tiempo Histórica</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>🏕️ COMUNALISMO</h4>
+        <p><strong>Época:</strong> Prehistoria - Primeras civilizaciones</p>
+        <p><strong>Actores:</strong> Hombres Libres, Patricios</p>
+        <p><strong>Características:</strong></p>
+        <ul style="margin-left:20px;">
+          <li>Propiedad colectiva de la tierra</li>
+          <li>Trabajo comunitario para beneficio de todos</li>
+          <li>No existía la explotación sistemática</li>
+          <li>Producción para subsistencia, no para vender</li>
+        </ul>
+        <span class="badge badge-green">Cooperación</span>
+      </div>
+
+      <div class="timeline-item">
+        <h4>⛓️ ESCLAVISMO</h4>
+        <p><strong>Época:</strong> Antigüedad (Grecia, Roma, Egipto)</p>
+        <p><strong>Actores:</strong> Esclavos, Esclavistas</p>
+        <p><strong>Características:</strong></p>
+        <ul style="margin-left:20px;">
+          <li>Los esclavos eran propiedad (cosas, no personas)</li>
+          <li>Trabajo forzado sin remuneración</li>
+          <li>Gran concentración de riqueza</li>
+          <li>Construcción de grandes obras (pirámides, templos)</li>
+        </ul>
+        <span class="badge badge-red">Explotación extrema</span>
+      </div>
+
+      <div class="timeline-item">
+        <h4>🏰 FEUDALISMO</h4>
+        <p><strong>Época:</strong> Edad Media (siglos V-XV)</p>
+        <p><strong>Actores:</strong> Siervos, Señores Feudales</p>
+        <p><strong>Características:</strong></p>
+        <ul style="margin-left:20px;">
+          <li>Tierra propiedad del señor feudal</li>
+          <li>Siervos trabajan la tierra a cambio de protección</li>
+          <li>Pagan tributos en especie o trabajo</li>
+          <li>Relación de dependencia personal</li>
+        </ul>
+        <span class="badge badge-orange">Dependencia</span>
+      </div>
+
+      <div class="timeline-item">
+        <h4> CAPITALISMO</h4>
+        <p><strong>Época:</strong> Siglo XVIII - Presente</p>
+        <p><strong>Actores:</strong> Obreros, Señores Capitalistas</p>
+        <p><strong>Características:</strong></p>
+        <ul style="margin-left:20px;">
+          <li>Propiedad privada de los medios de producción</li>
+          <li>Obreros venden su fuerza de trabajo por salario</li>
+          <li>Producción para el mercado y la ganancia</li>
+          <li>Revolución Industrial y tecnología</li>
+          <li>Derechos laborales (conquista histórica)</li>
+        </ul>
+        <span class="badge badge-blue">Salario y derechos</span>
+      </div>
+    </div>
+
+    <h3>🔍 Comparación de Sistemas</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Sistema</th>
+          <th>Relación de Producción</th>
+          <th>Forma de Explotación</th>
+          <th>Destino del Producto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Comunalismo</strong></td>
+          <td>Cooperación comunitaria</td>
+          <td>No existe explotación sistemática</td>
+          <td>Consumo propio de la comunidad</td>
+        </tr>
+        <tr>
+          <td><strong>Esclavismo</strong></td>
+          <td>Propietario - Esclavo (cosa)</td>
+          <td>Trabajo forzado sin pago</td>
+          <td>Beneficio del esclavista</td>
+        </tr>
+        <tr>
+          <td><strong>Feudalismo</strong></td>
+          <td>Señor - Siervo</td>
+          <td>Tributos en especie o trabajo</td>
+          <td>Mayormente para el señor feudal</td>
+        </tr>
+        <tr>
+          <td><strong>Capitalismo</strong></td>
+          <td>Capitalista - Obrero asalariado</td>
+          <td>Plusvalía (trabajo no pagado)</td>
+          <td>Mercado para obtener ganancia</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>🎯 Conceptos Clave</h3>
+    <div class="definition-box">
+      <strong>Fuerzas Productivas:</strong> Los medios (herramientas, tecnología, tierra) y la fuerza de trabajo humana que permiten producir bienes y servicios.
+    </div>
+    <div class="definition-box">
+      <strong>Relaciones de Producción:</strong> Las relaciones sociales que se establecen entre las personas durante el proceso productivo (quién es dueño, quién trabaja, cómo se distribuye).
+    </div>
+    <div class="definition-box">
+      <strong>Plusvalía:</strong> El valor creado por el trabajador que excede su salario y es apropiado por el capitalista como ganancia.
+    </div>
+    <div class="definition-box">
+      <strong>Medios de Producción:</strong> Herramientas, máquinas, tierra, fábricas necesarios para producir. En el capitalismo son propiedad privada.
+    </div>
+
+    <h3> Ejercicio: Identifica el Sistema</h3>
+    <p style="margin-bottom:15px;">Lee cada situación histórica y selecciona a qué sistema productivo corresponde:</p>
+    
+    <div id="history-container"></div>
+
+    <!-- ============================================ -->
+    <!-- ILUSTRACIONES MEJORADAS DE PERÍODOS HISTÓRICOS -->
+    <!-- ============================================ -->
+    <h3 style="margin-top:50px; text-align:center; font-size:2em;">🎨 Ilustraciones Detalladas de los Períodos Históricos</h3>
+    <p style="text-align:center; color:#666; margin-bottom:30px;">Representaciones visuales realistas de cada época y sus actores sociales</p>
+
+    <!-- ILUSTRACIÓN 1: COMUNALISMO - MEJORADA -->
+    <div class="illustration-card comunalismo">
+      <h4 style="color:#4CAF50;">🏕️ COMUNALISMO - La Era de la Cooperación (10,000 a.C. - 3,000 a.C.)</h4>
+      <svg class="svg-illustration" viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky-com" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="ground-com" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#7CB342;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#558B2F;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="mountain-com" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#8D6E63;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#5D4037;stop-opacity:1" />
+          </linearGradient>
+          <radialGradient id="sun-com" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#FFF9C4;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFD54F;stop-opacity:1" />
+          </radialGradient>
+          <filter id="shadow-com">
+            <feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.3"/>
+          </filter>
+        </defs>
+        
+        <!-- Cielo con gradiente -->
+        <rect width="900" height="550" fill="url(#sky-com)"/>
+        
+        <!-- Sol con resplandor -->
+        <circle cx="780" cy="80" r="70" fill="url(#sun-com)" opacity="0.9"/>
+        <circle cx="780" cy="80" r="90" fill="#FFD54F" opacity="0.3"/>
+        <circle cx="780" cy="80" r="110" fill="#FFD54F" opacity="0.15"/>
+        
+        <!-- Nubes -->
+        <ellipse cx="150" cy="70" rx="50" ry="20" fill="white" opacity="0.8"/>
+        <ellipse cx="180" cy="65" rx="40" ry="18" fill="white" opacity="0.8"/>
+        <ellipse cx="450" cy="90" rx="60" ry="22" fill="white" opacity="0.7"/>
+        <ellipse cx="490" cy="85" rx="45" ry="18" fill="white" opacity="0.7"/>
+        
+        <!-- Montañas lejanas -->
+        <polygon points="0,280 100,180 200,280" fill="#A1887F" opacity="0.6"/>
+        <polygon points="150,280 280,150 400,280" fill="#8D6E63" opacity="0.7"/>
+        <polygon points="350,280 500,120 650,280" fill="url(#mountain-com)" opacity="0.8"/>
+        <polygon points="600,280 720,170 850,280" fill="#8D6E63" opacity="0.7"/>
+        <polygon points="780,280 850,200 900,280" fill="#A1887F" opacity="0.6"/>
+        
+        <!-- Nieve en montañas -->
+        <polygon points="500,120 480,150 520,150" fill="white" opacity="0.9"/>
+        <polygon points="280,150 265,175 295,175" fill="white" opacity="0.9"/>
+        
+        <!-- Tierra verde con textura -->
+        <rect y="280" width="900" height="270" fill="url(#ground-com)"/>
+        
+        <!-- Río serpenteante -->
+        <path d="M 50 320 Q 150 310 250 330 Q 350 350 450 330 Q 550 310 650 330 Q 750 350 850 330" stroke="#4FC3F7" stroke-width="25" fill="none" opacity="0.8"/>
+        <path d="M 50 320 Q 150 310 250 330 Q 350 350 450 330 Q 550 310 650 330 Q 750 350 850 330" stroke="#81D4FA" stroke-width="15" fill="none" opacity="0.6"/>
+        
+        <!-- Árboles -->
+        <g filter="url(#shadow-com)">
+          <rect x="80" y="250" width="8" height="40" fill="#5D4037"/>
+          <circle cx="84" cy="240" r="25" fill="#2E7D32"/>
+          <circle cx="75" cy="245" r="20" fill="#388E3C"/>
+          <circle cx="93" cy="245" r="20" fill="#388E3C"/>
+        </g>
+        <g filter="url(#shadow-com)">
+          <rect x="820" y="255" width="8" height="40" fill="#5D4037"/>
+          <circle cx="824" cy="245" r="25" fill="#2E7D32"/>
+          <circle cx="815" cy="250" r="20" fill="#388E3C"/>
+          <circle cx="833" cy="250" r="20" fill="#388E3C"/>
+        </g>
+        
+        <!-- Aldeas comunales (chozas con techo de paja) -->
+        <g filter="url(#shadow-com)">
+          <!-- Choza 1 -->
+          <rect x="380" y="290" width="70" height="55" fill="#8D6E63"/>
+          <polygon points="370,290 415,250 460,290" fill="#A1887F"/>
+          <rect x="405" y="315" width="20" height="30" fill="#5D4037"/>
+          <!-- Choza 2 -->
+          <rect x="480" y="295" width="65" height="50" fill="#8D6E63"/>
+          <polygon points="470,295 512,258 555,295" fill="#A1887F"/>
+          <rect x="502" y="318" width="18" height="27" fill="#5D4037"/>
+          <!-- Choza 3 -->
+          <rect x="300" y="300" width="60" height="45" fill="#8D6E63"/>
+          <polygon points="290,300 330,265 370,300" fill="#A1887F"/>
+          <rect x="320" y="322" width="18" height="23" fill="#5D4037"/>
+        </g>
+        
+        <!-- Humo de las chozas -->
+        <circle cx="415" cy="240" r="8" fill="#BDBDBD" opacity="0.5"/>
+        <circle cx="420" cy="230" r="10" fill="#BDBDBD" opacity="0.4"/>
+        <circle cx="425" cy="218" r="12" fill="#BDBDBD" opacity="0.3"/>
+        
+        <!-- PERSONAS - Figuras más detalladas -->
+        
+        <!-- Persona 1: Cavando tierra (hombre) -->
+        <g filter="url(#shadow-com)">
+          <!-- Sombra -->
+          <ellipse cx="180" cy="430" rx="20" ry="5" fill="black" opacity="0.2"/>
+          <!-- Piernas -->
+          <rect x="172" y="395" width="7" height="30" fill="#8D6E63"/>
+          <rect x="185" y="395" width="7" height="30" fill="#8D6E63"/>
+          <!-- Cuerpo -->
+          <rect x="170" y="365" width="24" height="35" rx="3" fill="#D84315"/>
+          <!-- Brazos -->
+          <rect x="160" y="370" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(-20 165 370)"/>
+          <rect x="194" y="370" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(20 199 370)"/>
+          <!-- Cabeza -->
+          <circle cx="182" cy="355" r="14" fill="#FDBCB4"/>
+          <!-- Cabello -->
+          <path d="M 170 350 Q 182 340 194 350 Q 194 345 182 342 Q 170 345 170 350" fill="#3E2723"/>
+          <!-- Herramienta (pala) -->
+          <line x1="195" y1="385" x2="220" y2="425" stroke="#5D4037" stroke-width="4" stroke-linecap="round"/>
+          <rect x="215" y="420" width="15" height="12" fill="#757575" rx="2"/>
+        </g>
+        
+        <!-- Persona 2: Cargando cosecha (mujer) -->
+        <g filter="url(#shadow-com)">
+          <ellipse cx="280" cy="435" rx="20" ry="5" fill="black" opacity="0.2"/>
+          <rect x="272" y="400" width="7" height="30" fill="#8D6E63"/>
+          <rect x="285" y="400" width="7" height="30" fill="#8D6E63"/>
+          <rect x="270" y="370" width="24" height="35" rx="3" fill="#6A1B9A"/>
+          <rect x="260" y="375" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(-15 265 375)"/>
+          <rect x="294" y="375" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(15 299 375)"/>
+          <circle cx="282" cy="360" r="14" fill="#FDBCB4"/>
+          <path d="M 270 355 Q 282 345 294 355 Q 294 350 282 347 Q 270 350 270 355" fill="#3E2723"/>
+          <!-- Cesta en la cabeza -->
+          <ellipse cx="282" cy="342" rx="18" ry="8" fill="#8D6E63"/>
+          <circle cx="275" cy="338" r="5" fill="#FF6F00"/>
+          <circle cx="285" cy="336" r="5" fill="#FF6F00"/>
+          <circle cx="290" cy="340" r="5" fill="#FF6F00"/>
+        </g>
+        
+        <!-- Persona 3: Sembrando (hombre) -->
+        <g filter="url(#shadow-com)">
+          <ellipse cx="580" cy="440" rx="20" ry="5" fill="black" opacity="0.2"/>
+          <rect x="572" y="405" width="7" height="30" fill="#8D6E63"/>
+          <rect x="585" y="405" width="7" height="30" fill="#8D6E63"/>
+          <rect x="570" y="375" width="24" height="35" rx="3" fill="#1565C0"/>
+          <rect x="560" y="380" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(-25 565 380)"/>
+          <rect x="594" y="380" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(25 599 380)"/>
+          <circle cx="582" cy="365" r="14" fill="#FDBCB4"/>
+          <path d="M 570 360 Q 582 350 594 360 Q 594 355 582 352 Q 570 355 570 360" fill="#3E2723"/>
+          <!-- Semillas cayendo -->
+          <circle cx="555" cy="410" r="3" fill="#FFD54F"/>
+          <circle cx="548" cy="418" r="3" fill="#FFD54F"/>
+          <circle cx="542" cy="425" r="3" fill="#FFD54F"/>
+        </g>
+        
+        <!-- Persona 4: Compartiendo comida (mujer) -->
+        <g filter="url(#shadow-com)">
+          <ellipse cx="680" cy="445" rx="20" ry="5" fill="black" opacity="0.2"/>
+          <rect x="672" y="410" width="7" height="30" fill="#8D6E63"/>
+          <rect x="685" y="410" width="7" height="30" fill="#8D6E63"/>
+          <rect x="670" y="380" width="24" height="35" rx="3" fill="#C62828"/>
+          <rect x="660" y="385" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(-20 665 385)"/>
+          <rect x="694" y="385" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(20 699 385)"/>
+          <circle cx="682" cy="370" r="14" fill="#FDBCB4"/>
+          <path d="M 670 365 Q 682 355 694 365 Q 694 360 682 357 Q 670 360 670 365" fill="#3E2723"/>
+          <!-- Plato con comida -->
+          <ellipse cx="705" cy="395" rx="15" ry="6" fill="#FFF9C4"/>
+          <circle cx="700" cy="393" r="4" fill="#FF6F00"/>
+          <circle cx="708" cy="393" r="4" fill="#4CAF50"/>
+        </g>
+        
+        <!-- Persona 5: Tejiendo (mujer sentada) -->
+        <g filter="url(#shadow-com)">
+          <ellipse cx="130" cy="450" rx="20" ry="5" fill="black" opacity="0.2"/>
+          <rect x="122" y="420" width="7" height="25" fill="#8D6E63"/>
+          <rect x="135" y="420" width="7" height="25" fill="#8D6E63"/>
+          <rect x="120" y="390" width="24" height="35" rx="3" fill="#00838F"/>
+          <rect x="110" y="395" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(-10 115 395)"/>
+          <rect x="144" y="395" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(10 149 395)"/>
+          <circle cx="132" cy="380" r="14" fill="#FDBCB4"/>
+          <path d="M 120 375 Q 132 365 144 375 Q 144 370 132 367 Q 120 370 120 375" fill="#3E2723"/>
+          <!-- Telar -->
+          <rect x="100" y="410" width="30" height="20" fill="#8D6E63"/>
+          <line x1="105" y1="415" x2="125" y2="415" stroke="#FFD54F" stroke-width="1"/>
+          <line x1="105" y1="420" x2="125" y2="420" stroke="#FFD54F" stroke-width="1"/>
+          <line x1="105" y1="425" x2="125" y2="425" stroke="#FFD54F" stroke-width="1"/>
+        </g>
+        
+        <!-- Cultivos organizados -->
+        <g>
+          <!-- Fila 1 -->
+          <circle cx="400" cy="460" r="8" fill="#FF6F00"/>
+          <circle cx="420" cy="460" r="8" fill="#FF6F00"/>
+          <circle cx="440" cy="460" r="8" fill="#FF6F00"/>
+          <circle cx="460" cy="460" r="8" fill="#FF6F00"/>
+          <circle cx="480" cy="460" r="8" fill="#FF6F00"/>
+          <!-- Fila 2 -->
+          <circle cx="410" cy="480" r="8" fill="#FFD54F"/>
+          <circle cx="430" cy="480" r="8" fill="#FFD54F"/>
+          <circle cx="450" cy="480" r="8" fill="#FFD54F"/>
+          <circle cx="470" cy="480" r="8" fill="#FFD54F"/>
+          <!-- Fila 3 -->
+          <circle cx="400" cy="500" r="8" fill="#4CAF50"/>
+          <circle cx="420" cy="500" r="8" fill="#4CAF50"/>
+          <circle cx="440" cy="500" r="8" fill="#4CAF50"/>
+          <circle cx="460" cy="500" r="8" fill="#4CAF50"/>
+          <circle cx="480" cy="500" r="8" fill="#4CAF50"/>
+        </g>
+        
+        <!-- Animales domésticos -->
+        <g filter="url(#shadow-com)">
+          <!-- Oveja 1 -->
+          <ellipse cx="750" cy="430" rx="18" ry="12" fill="white"/>
+          <circle cx="735" cy="425" r="8" fill="white"/>
+          <circle cx="732" cy="423" r="2" fill="black"/>
+          <rect x="742" y="438" width="3" height="10" fill="#3E2723"/>
+          <rect x="750" y="438" width="3" height="10" fill="#3E2723"/>
+          <rect x="758" y="438" width="3" height="10" fill="#3E2723"/>
+          <rect x="765" y="438" width="3" height="10" fill="#3E2723"/>
+          <!-- Oveja 2 -->
+          <ellipse cx="790" cy="435" rx="18" ry="12" fill="#F5F5F5"/>
+          <circle cx="775" cy="430" r="8" fill="#F5F5F5"/>
+          <circle cx="772" cy="428" r="2" fill="black"/>
+          <rect x="782" y="443" width="3" height="10" fill="#3E2723"/>
+          <rect x="790" y="443" width="3" height="10" fill="#3E2723"/>
+          <rect x="798" y="443" width="3" height="10" fill="#3E2723"/>
+          <rect x="805" y="443" width="3" height="10" fill="#3E2723"/>
+        </g>
+        
+        <!-- Flechas de cooperación -->
+        <path d="M 200 400 Q 300 380 400 390" stroke="#4CAF50" stroke-width="3" fill="none" stroke-dasharray="6,4" opacity="0.7"/>
+        <path d="M 400 390 Q 500 400 600 390" stroke="#4CAF50" stroke-width="3" fill="none" stroke-dasharray="6,4" opacity="0.7"/>
+        <polygon points="600,385 610,390 600,395" fill="#4CAF50" opacity="0.7"/>
+        
+        <!-- Título -->
+        <rect x="200" y="510" width="500" height="35" rx="17" fill="#4CAF50" opacity="0.9"/>
+        <text x="450" y="533" text-anchor="middle" font-size="18" font-weight="bold" fill="white" font-family="Poppins">TRABAJO COLECTIVO • PROPIEDAD COMUNAL • SIN JERARQUÍA</text>
+      </svg>
+      
+      <div class="scene-description comunalismo">
+        <h5>🔍 Análisis de la Escena:</h5>
+        <ul>
+          <li><strong>Actores visibles:</strong> Hombres y mujeres libres trabajando juntos sin jerarquía</li>
+          <li><strong>Actividades:</strong> Agricultura, tejido, crianza de animales, construcción comunal</li>
+          <li><strong>Propiedad:</strong> Las chozas, cultivos y animales son de todos</li>
+          <li><strong>Distribución:</strong> La comida se comparte equitativamente (persona con plato)</li>
+          <li><strong>Sin explotación:</strong> Nadie trabaja bajo amenaza ni paga tributo</li>
+        </ul>
+      </div>
+      
+      <div style="text-align:center; margin-top:15px;">
+        <span class="badge badge-green">Hombres Libres</span>
+        <span class="badge badge-green">Patricios</span>
+        <span class="badge badge-green">Cooperación</span>
+        <span class="badge badge-green">Propiedad Colectiva</span>
+      </div>
+    </div>
+
+    <!-- ILUSTRACIÓN 2: ESCLAVISMO - MEJORADA -->
+    <div class="illustration-card esclavismo">
+      <h4 style="color:#f44336;">⛓️ ESCLAVISMO - La Era de la Explotación Extrema (3,000 a.C. - 476 d.C.)</h4>
+      <svg class="svg-illustration" viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky-esc" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FF8A65;stop-opacity:1" />
+            <stop offset="60%" style="stop-color:#FFCC80;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="pyramid-esc" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFD54F;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#F9A825;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="sand-esc" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFE0B2;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFCC80;stop-opacity:1" />
+          </linearGradient>
+          <filter id="shadow-esc">
+            <feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.4"/>
+          </filter>
+          <filter id="heat-esc">
+            <feGaussianBlur stdDeviation="0.5"/>
+          </filter>
+        </defs>
+        
+        <!-- Cielo ardiente -->
+        <rect width="900" height="550" fill="url(#sky-esc)"/>
+        
+        <!-- Sol abrasador -->
+        <circle cx="450" cy="70" r="60" fill="#FF5722" opacity="0.9"/>
+        <circle cx="450" cy="70" r="80" fill="#FF5722" opacity="0.4"/>
+        <circle cx="450" cy="70" r="110" fill="#FF5722" opacity="0.2"/>
+        <circle cx="450" cy="70" r="140" fill="#FF5722" opacity="0.1"/>
+        
+        <!-- Rayos de calor -->
+        <line x1="450" y1="130" x2="450" y2="200" stroke="#FF5722" stroke-width="2" opacity="0.5"/>
+        <line x1="400" y1="130" x2="380" y2="200" stroke="#FF5722" stroke-width="2" opacity="0.4"/>
+        <line x1="500" y1="130" x2="520" y2="200" stroke="#FF5722" stroke-width="2" opacity="0.4"/>
+        <line x1="350" y1="130" x2="320" y2="200" stroke="#FF5722" stroke-width="2" opacity="0.3"/>
+        <line x1="550" y1="130" x2="580" y2="200" stroke="#FF5722" stroke-width="2" opacity="0.3"/>
+        
+        <!-- Pirámide principal (en construcción) -->
+        <polygon points="250,450 500,150 750,450" fill="url(#pyramid-esc)" filter="url(#shadow-esc)"/>
+        <polygon points="270,450 500,170 730,450" fill="#FBC02D" opacity="0.8"/>
+        
+        <!-- Líneas de bloques de la pirámide -->
+        <line x1="280" y1="420" x2="720" y2="420" stroke="#F57F17" stroke-width="2"/>
+        <line x1="310" y1="380" x2="690" y2="380" stroke="#F57F17" stroke-width="2"/>
+        <line x1="340" y1="340" x2="660" y2="340" stroke="#F57F17" stroke-width="2"/>
+        <line x1="370" y1="300" x2="630" y2="300" stroke="#F57F17" stroke-width="2"/>
+        <line x1="400" y1="260" x2="600" y2="260" stroke="#F57F17" stroke-width="2"/>
+        <line x1="430" y1="220" x2="570" y2="220" stroke="#F57F17" stroke-width="2"/>
+        <line x1="460" y1="180" x2="540" y2="180" stroke="#F57F17" stroke-width="2"/>
+        
+        <!-- Bloques individuales -->
+        <rect x="300" y="400" width="30" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        <rect x="340" y="400" width="30" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        <rect x="380" y="400" width="30" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        <rect x="420" y="400" width="30" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        <rect x="460" y="400" width="30" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        <rect x="500" y="400" width="30" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        <rect x="540" y="400" width="30" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        <rect x="580" y="400" width="30" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        <rect x="620" y="400" width="30" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        
+        <!-- Pirámide secundaria (lejana) -->
+        <polygon points="50,450 150,300 250,450" fill="#FFB74D" opacity="0.6"/>
+        <polygon points="650,450 780,280 900,450" fill="#FFB74D" opacity="0.5"/>
+        
+        <!-- Esfinge -->
+        <g filter="url(#shadow-esc)">
+          <rect x="780" y="400" width="80" height="50" fill="#FFB74D"/>
+          <circle cx="820" cy="390" r="20" fill="#FFB74D"/>
+          <polygon points="800,390 820,370 840,390" fill="#FFB74D"/>
+        </g>
+        
+        <!-- ESCLAVISTAS (arriba, en plataforma) -->
+        <g filter="url(#shadow-esc)">
+          <!-- Plataforma elevada -->
+          <rect x="100" y="280" width="120" height="15" fill="#8D6E63"/>
+          <rect x="110" y="295" width="10" height="50" fill="#5D4037"/>
+          <rect x="200" y="295" width="10" height="50" fill="#5D4037"/>
+          
+          <!-- Esclavista 1 (con látigo) -->
+          <ellipse cx="140" cy="350" rx="18" ry="5" fill="black" opacity="0.3"/>
+          <rect x="132" y="310" width="8" height="35" fill="#FFF9C4"/>
+          <rect x="145" y="310" width="8" height="35" fill="#FFF9C4"/>
+          <rect x="130" y="275" width="25" height="40" rx="3" fill="#FFFFFF"/>
+          <rect x="120" y="280" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-30 125 280)"/>
+          <rect x="155" y="280" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(30 160 280)"/>
+          <circle cx="142" cy="265" r="14" fill="#FDBCB4"/>
+          <!-- Corona/tocado -->
+          <polygon points="130,255 142,245 154,255 154,260 130,260" fill="#FFD700"/>
+          <!-- Látigo -->
+          <path d="M 160 290 Q 180 310 200 340 Q 210 360 220 380" stroke="#5D4037" stroke-width="3" fill="none"/>
+          <circle cx="220" cy="380" r="3" fill="#5D4037"/>
+          
+          <!-- Esclavista 2 (con vara) -->
+          <ellipse cx="200" cy="350" rx="18" ry="5" fill="black" opacity="0.3"/>
+          <rect x="192" y="310" width="8" height="35" fill="#FFF9C4"/>
+          <rect x="205" y="310" width="8" height="35" fill="#FFF9C4"/>
+          <rect x="190" y="275" width="25" height="40" rx="3" fill="#E91E63"/>
+          <rect x="180" y="280" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-20 185 280)"/>
+          <rect x="215" y="280" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(20 220 280)"/>
+          <circle cx="202" cy="265" r="14" fill="#FDBCB4"/>
+          <polygon points="190,255 202,245 214,255 214,260 190,260" fill="#FFD700"/>
+          <!-- Vara de mando -->
+          <line x1="220" y1="290" x2="240" y2="350" stroke="#8D6E63" stroke-width="4"/>
+          <circle cx="240" cy="350" r="5" fill="#FFD700"/>
+        </g>
+        
+        <!-- ESCLAVOS (abajo, trabajando) -->
+        
+        <!-- Esclavo 1: Cargando bloque pesado -->
+        <g filter="url(#shadow-esc)">
+          <ellipse cx="350" cy="480" rx="22" ry="6" fill="black" opacity="0.3"/>
+          <rect x="342" y="440" width="8" height="35" fill="#8D6E63"/>
+          <rect x="355" y="440" width="8" height="35" fill="#8D6E63"/>
+          <rect x="340" y="405" width="25" height="40" rx="3" fill="#6D4C41"/>
+          <rect x="330" y="410" width="10" height="30" rx="3" fill="#8D6E63" transform="rotate(-40 335 410)"/>
+          <rect x="365" y="410" width="10" height="30" rx="3" fill="#8D6E63" transform="rotate(40 370 410)"/>
+          <circle cx="352" cy="395" r="14" fill="#8D6E63"/>
+          <!-- Bloque sobre hombros -->
+          <rect x="330" y="375" width="45" height="25" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+          <!-- Cadenas en tobillos -->
+          <circle cx="346" cy="472" r="3" fill="#424242"/>
+          <circle cx="359" cy="472" r="3" fill="#424242"/>
+          <line x1="346" y1="472" x2="359" y2="472" stroke="#424242" stroke-width="2"/>
+          <!-- Expresión de esfuerzo -->
+          <line x1="347" y1="393" x2="351" y2="393" stroke="black" stroke-width="1.5"/>
+          <line x1="353" y1="393" x2="357" y2="393" stroke="black" stroke-width="1.5"/>
+          <path d="M 348 400 Q 352 398 356 400" stroke="black" stroke-width="1.5" fill="none"/>
+        </g>
+        
+        <!-- Esclavo 2: Arrastrando piedra con cuerda -->
+        <g filter="url(#shadow-esc)">
+          <ellipse cx="500" cy="485" rx="22" ry="6" fill="black" opacity="0.3"/>
+          <rect x="492" y="445" width="8" height="35" fill="#8D6E63"/>
+          <rect x="505" y="445" width="8" height="35" fill="#8D6E63"/>
+          <rect x="490" y="410" width="25" height="40" rx="3" fill="#5D4037"/>
+          <rect x="480" y="415" width="10" height="30" rx="3" fill="#8D6E63" transform="rotate(-30 485 415)"/>
+          <rect x="515" y="415" width="10" height="30" rx="3" fill="#8D6E63" transform="rotate(30 520 415)"/>
+          <circle cx="502" cy="400" r="14" fill="#8D6E63"/>
+          <!-- Cuerda -->
+          <path d="M 515 420 Q 540 430 560 440" stroke="#8D6E63" stroke-width="3" fill="none"/>
+          <!-- Piedra grande -->
+          <rect x="555" y="430" width="50" height="40" fill="#9E9E9E" stroke="#616161" stroke-width="1"/>
+          <!-- Cadenas -->
+          <circle cx="496" cy="477" r="3" fill="#424242"/>
+          <circle cx="509" cy="477" r="3" fill="#424242"/>
+          <line x1="496" y1="477" x2="509" y2="477" stroke="#424242" stroke-width="2"/>
+          <!-- Sudor -->
+          <circle cx="510" cy="395" r="2" fill="#81D4FA" opacity="0.7"/>
+          <circle cx="513" cy="400" r="2" fill="#81D4FA" opacity="0.7"/>
+        </g>
+        
+        <!-- Esclavo 3: Cayado/agotado -->
+        <g filter="url(#shadow-esc)">
+          <ellipse cx="650" cy="490" rx="22" ry="6" fill="black" opacity="0.3"/>
+          <!-- Cuerpo inclinado -->
+          <rect x="642" y="450" width="8" height="35" fill="#8D6E63" transform="rotate(15 646 450)"/>
+          <rect x="655" y="450" width="8" height="35" fill="#8D6E63" transform="rotate(15 659 450)"/>
+          <rect x="640" y="415" width="25" height="40" rx="3" fill="#4E342E" transform="rotate(15 652 415)"/>
+          <rect x="630" y="420" width="10" height="30" rx="3" fill="#8D6E63" transform="rotate(-10 635 420)"/>
+          <rect x="665" y="420" width="10" height="30" rx="3" fill="#8D6E63" transform="rotate(40 670 420)"/>
+          <circle cx="652" cy="405" r="14" fill="#8D6E63"/>
+          <!-- Cadenas en muñecas -->
+          <circle cx="635" cy="445" r="3" fill="#424242"/>
+          <circle cx="670" cy="445" r="3" fill="#424242"/>
+          <!-- Expresión de agotamiento -->
+          <line x1="647" y1="403" x2="651" y2="403" stroke="black" stroke-width="1.5"/>
+          <line x1="653" y1="403" x2="657" y2="403" stroke="black" stroke-width="1.5"/>
+          <line x1="648" y1="410" x2="656" y2="410" stroke="black" stroke-width="1.5"/>
+        </g>
+        
+        <!-- Esclavo 4: Subiendo rampa con bloque -->
+        <g filter="url(#shadow-esc)">
+          <ellipse cx="420" cy="360" rx="20" ry="5" fill="black" opacity="0.3"/>
+          <rect x="412" y="325" width="7" height="30" fill="#8D6E63"/>
+          <rect x="425" y="325" width="7" height="30" fill="#8D6E63"/>
+          <rect x="410" y="295" width="22" height="35" rx="3" fill="#6D4C41"/>
+          <rect x="400" y="300" width="10" height="25" rx="3" fill="#8D6E63" transform="rotate(-35 405 300)"/>
+          <rect x="432" y="300" width="10" height="25" rx="3" fill="#8D6E63" transform="rotate(35 437 300)"/>
+          <circle cx="421" cy="285" r="13" fill="#8D6E63"/>
+          <!-- Bloque pequeño -->
+          <rect x="405" y="270" width="32" height="20" fill="#FFD54F" stroke="#F57F17" stroke-width="1"/>
+        </g>
+        
+        <!-- Rampa de construcción -->
+        <polygon points="300,450 450,300 470,300 320,450" fill="#D7CCC8" opacity="0.7"/>
+        
+        <!-- Texto -->
+        <rect x="200" y="510" width="500" height="35" rx="17" fill="#f44336" opacity="0.9"/>
+        <text x="450" y="533" text-anchor="middle" font-size="18" font-weight="bold" fill="white" font-family="Poppins">TRABAJO FORZADO • SIN DERECHOS • CADENAS Y LÁTIGO</text>
+        
+        <!-- Símbolo de explotación -->
+        <text x="450" y="130" text-anchor="middle" font-size="50" opacity="0.3">⛓️</text>
+      </svg>
+      
+      <div class="scene-description esclavismo">
+        <h5>🔍 Análisis de la Escena:</h5>
+        <ul>
+          <li><strong>Actores visibles:</strong> Esclavistas (arriba, con látigos y coronas) vs. Esclavos (abajo, encadenados)</li>
+          <li><strong>Condiciones:</strong> Sol abrasador, trabajo físico extremo, sin descanso</li>
+          <li><strong>Cadenas:</strong> Los esclavos tienen cadenas en tobillos y muñecas - son propiedad</li>
+          <li><strong>Jerarquía:</strong> Los esclavistas están en plataforma elevada, los esclavos abajo</li>
+          <li><strong>Sin remuneración:</strong> Ningún pago, solo castigo físico (látigo)</li>
+          <li><strong>Obras monumentales:</strong> Pirámides construidas con sufrimiento humano</li>
+        </ul>
+      </div>
+      
+      <div style="text-align:center; margin-top:15px;">
+        <span class="badge badge-red">Esclavos</span>
+        <span class="badge badge-red">Esclavistas</span>
+        <span class="badge badge-red">Cadenas</span>
+        <span class="badge badge-red">Trabajo Forzado</span>
+      </div>
+    </div>
+
+    <!-- ILUSTRACIÓN 3: FEUDALISMO - MEJORADA -->
+    <div class="illustration-card feudalismo">
+      <h4 style="color:#FF9800;">🏰 FEUDALISMO - La Era de la Dependencia (Siglos V-XV)</h4>
+      <svg class="svg-illustration" viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky-feu" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#90CAF9;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#E3F2FD;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="castle-feu" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#9E9E9E;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#616161;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="field-feu" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#AED581;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#7CB342;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="autumn-feu" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFB74D;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#F57C00;stop-opacity:1" />
+          </linearGradient>
+          <filter id="shadow-feu">
+            <feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.3"/>
+          </filter>
+        </defs>
+        
+        <!-- Cielo otoñal -->
+        <rect width="900" height="550" fill="url(#sky-feu)"/>
+        
+        <!-- Nubes -->
+        <ellipse cx="120" cy="60" rx="50" ry="20" fill="white" opacity="0.8"/>
+        <ellipse cx="150" cy="55" rx="40" ry="18" fill="white" opacity="0.8"/>
+        <ellipse cx="700" cy="80" rx="55" ry="22" fill="white" opacity="0.7"/>
+        <ellipse cx="740" cy="75" rx="45" ry="18" fill="white" opacity="0.7"/>
+        
+        <!-- Sol suave -->
+        <circle cx="800" cy="70" r="50" fill="#FFF9C4" opacity="0.9"/>
+        <circle cx="800" cy="70" r="70" fill="#FFF9C4" opacity="0.4"/>
+        
+        <!-- Colinas lejanas -->
+        <path d="M 0 250 Q 150 200 300 230 Q 450 200 600 240 Q 750 210 900 250 L 900 300 L 0 300 Z" fill="#81C784" opacity="0.6"/>
+        
+        <!-- CASTILLO FEUDAL (imponente, arriba a la derecha) -->
+        <g filter="url(#shadow-feu)">
+          <!-- Base del castillo -->
+          <rect x="580" y="130" width="220" height="150" fill="url(#castle-feu)"/>
+          
+          <!-- Torres laterales -->
+          <rect x="560" y="100" width="40" height="180" fill="#757575"/>
+          <rect x="780" y="100" width="40" height="180" fill="#757575"/>
+          
+          <!-- Torre central (más alta) -->
+          <rect x="660" y="70" width="60" height="210" fill="#616161"/>
+          
+          <!-- Almenas (merlones) -->
+          <rect x="560" y="90" width="15" height="15" fill="#616161"/>
+          <rect x="585" y="90" width="15" height="15" fill="#616161"/>
+          <rect x="610" y="90" width="15" height="15" fill="#616161"/>
+          <rect x="635" y="90" width="15" height="15" fill="#616161"/>
+          <rect x="660" y="60" width="15" height="15" fill="#424242"/>
+          <rect x="685" y="60" width="15" height="15" fill="#424242"/>
+          <rect x="710" y="60" width="15" height="15" fill="#424242"/>
+          <rect x="735" y="60" width="15" height="15" fill="#424242"/>
+          <rect x="760" y="60" width="15" height="15" fill="#424242"/>
+          <rect x="780" y="90" width="15" height="15" fill="#616161"/>
+          <rect x="805" y="90" width="15" height="15" fill="#616161"/>
+          
+          <!-- Puerta principal -->
+          <path d="M 670 280 L 670 230 Q 690 210 710 230 L 710 280 Z" fill="#4E342E"/>
+          <circle cx="705" cy="255" r="3" fill="#FFD700"/>
+          
+          <!-- Ventanas -->
+          <rect x="600" y="160" width="20" height="30" fill="#FFF9C4" opacity="0.7"/>
+          <rect x="640" y="160" width="20" height="30" fill="#FFF9C4" opacity="0.7"/>
+          <rect x="740" y="160" width="20" height="30" fill="#FFF9C4" opacity="0.7"/>
+          <rect x="780" y="160" width="20" height="30" fill="#FFF9C4" opacity="0.7"/>
+          <rect x="680" y="130" width="15" height="25" fill="#FFF9C4" opacity="0.7"/>
+          <rect x="705" y="130" width="15" height="25" fill="#FFF9C4" opacity="0.7"/>
+          
+          <!-- Bandera -->
+          <line x1="690" y1="70" x2="690" y2="30" stroke="#333" stroke-width="3"/>
+          <polygon points="690,30 730,40 690,50" fill="#D32F2F"/>
+          <polygon points="690,30 730,40 690,50" fill="#D32F2F" opacity="0.8"/>
+        </g>
+        
+        <!-- TIERRA DE CULTIVO (abajo, extensa) -->
+        <rect y="320" width="900" height="230" fill="url(#field-feu)"/>
+        
+        <!-- Surcos de tierra arada -->
+        <line x1="50" y1="360" x2="500" y2="360" stroke="#8D6E63" stroke-width="2" opacity="0.6"/>
+        <line x1="50" y1="380" x2="500" y2="380" stroke="#8D6E63" stroke-width="2" opacity="0.6"/>
+        <line x1="50" y1="400" x2="500" y2="400" stroke="#8D6E63" stroke-width="2" opacity="0.6"/>
+        <line x1="50" y1="420" x2="500" y2="420" stroke="#8D6E63" stroke-width="2" opacity="0.6"/>
+        <line x1="50" y1="440" x2="500" y2="440" stroke="#8D6E63" stroke-width="2" opacity="0.6"/>
+        <line x1="50" y1="460" x2="500" y2="460" stroke="#8D6E63" stroke-width="2" opacity="0.6"/>
+        
+        <!-- Campos de trigo maduro -->
+        <g opacity="0.8">
+          <rect x="520" y="340" width="360" height="20" fill="#FFD54F"/>
+          <rect x="520" y="370" width="360" height="20" fill="#FFC107"/>
+          <rect x="520" y="400" width="360" height="20" fill="#FFB300"/>
+          <rect x="520" y="430" width="360" height="20" fill="#FFA000"/>
+        </g>
+        
+        <!-- SIERVOS trabajando -->
+        
+        <!-- Siervo 1: Arando con buey -->
+        <g filter="url(#shadow-feu)">
+          <ellipse cx="180" cy="440" rx="22" ry="6" fill="black" opacity="0.3"/>
+          <!-- Buey -->
+          <ellipse cx="230" cy="420" rx="35" ry="18" fill="#795548"/>
+          <circle cx="205" cy="410" r="12" fill="#795548"/>
+          <circle cx="200" cy="407" r="2" fill="black"/>
+          <circle cx="210" cy="407" r="2" fill="black"/>
+          <path d="M 195 405 Q 205 400 215 405" stroke="#3E2723" stroke-width="2" fill="none"/>
+          <!-- Cuernos -->
+          <path d="M 200 402 Q 195 395 190 398" stroke="#3E2723" stroke-width="3" fill="none"/>
+          <path d="M 210 402 Q 215 395 220 398" stroke="#3E2723" stroke-width="3" fill="none"/>
+          <!-- Patas del buey -->
+          <rect x="210" y="432" width="5" height="15" fill="#5D4037"/>
+          <rect x="225" y="432" width="5" height="15" fill="#5D4037"/>
+          <rect x="240" y="432" width="5" height="15" fill="#5D4037"/>
+          <rect x="255" y="432" width="5" height="15" fill="#5D4037"/>
+          <!-- Yugo -->
+          <rect x="200" y="415" width="40" height="8" fill="#5D4037"/>
+          <!-- Cuerda al arado -->
+          <line x1="200" y1="420" x2="160" y2="425" stroke="#5D4037" stroke-width="2"/>
+          
+          <!-- Siervo -->
+          <rect x="132" y="400" width="8" height="35" fill="#5D4037"/>
+          <rect x="145" y="400" width="8" height="35" fill="#5D4037"/>
+          <rect x="130" y="365" width="25" height="40" rx="3" fill="#8D6E63"/>
+          <rect x="120" y="370" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-20 125 370)"/>
+          <rect x="155" y="370" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(20 160 370)"/>
+          <circle cx="142" cy="355" r="14" fill="#FDBCB4"/>
+          <!-- Gorro de siervo -->
+          <path d="M 130 350 Q 142 340 154 350 L 154 355 L 130 355 Z" fill="#5D4037"/>
+          <!-- Arado -->
+          <line x1="155" y1="385" x2="175" y2="425" stroke="#5D4037" stroke-width="4"/>
+          <path d="M 170 420 L 180 430 L 175 435 Z" fill="#757575"/>
+        </g>
+        
+        <!-- Siervo 2: Cosechando trigo con hoz -->
+        <g filter="url(#shadow-feu)">
+          <ellipse cx="380" cy="445" rx="20" ry="5" fill="black" opacity="0.3"/>
+          <rect x="372" y="410" width="8" height="30" fill="#5D4037"/>
+          <rect x="385" y="410" width="8" height="30" fill="#5D4037"/>
+          <rect x="370" y="375" width="25" height="40" rx="3" fill="#A1887F"/>
+          <rect x="360" y="380" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-25 365 380)"/>
+          <rect x="395" y="380" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(25 400 380)"/>
+          <circle cx="382" cy="365" r="14" fill="#FDBCB4"/>
+          <path d="M 370 360 Q 382 350 394 360 L 394 365 L 370 365 Z" fill="#5D4037"/>
+          <!-- Hoz -->
+          <line x1="395" y1="390" x2="420" y2="420" stroke="#5D4037" stroke-width="3"/>
+          <path d="M 415 415 Q 425 420 420 430 Q 410 425 415 415" fill="#9E9E9E"/>
+          <!-- Haz de trigo -->
+          <rect x="355" y="395" width="15" height="25" fill="#FFD54F"/>
+          <line x1="358" y1="395" x2="358" y2="390" stroke="#FFD54F" stroke-width="1"/>
+          <line x1="362" y1="395" x2="362" y2="388" stroke="#FFD54F" stroke-width="1"/>
+          <line x1="366" y1="395" x2="366" y2="390" stroke="#FFD54F" stroke-width="1"/>
+        </g>
+        
+        <!-- Siervo 3: Cargando sacos de grano -->
+        <g filter="url(#shadow-feu)">
+          <ellipse cx="500" cy="450" rx="20" ry="5" fill="black" opacity="0.3"/>
+          <rect x="492" y="415" width="8" height="30" fill="#5D4037"/>
+          <rect x="505" y="415" width="8" height="30" fill="#5D4037"/>
+          <rect x="490" y="380" width="25" height="40" rx="3" fill="#6D4C41"/>
+          <rect x="480" y="385" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-15 485 385)"/>
+          <rect x="515" y="385" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(15 520 385)"/>
+          <circle cx="502" cy="370" r="14" fill="#FDBCB4"/>
+          <path d="M 490 365 Q 502 355 514 365 L 514 370 L 490 370 Z" fill="#5D4037"/>
+          <!-- Saco grande en espalda -->
+          <ellipse cx="502" cy="395" rx="20" ry="25" fill="#D7CCC8"/>
+          <line x1="495" y1="385" x2="510" y2="385" stroke="#8D6E63" stroke-width="1"/>
+          <line x1="495" y1="395" x2="510" y2="395" stroke="#8D6E63" stroke-width="1"/>
+          <line x1="495" y1="405" x2="510" y2="405" stroke="#8D6E63" stroke-width="1"/>
+        </g>
+        
+        <!-- Siervo 4: Mujeres hilando/cosiendo -->
+        <g filter="url(#shadow-feu)">
+          <ellipse cx="100" cy="455" rx="18" ry="5" fill="black" opacity="0.3"/>
+          <rect x="92" y="425" width="7" height="25" fill="#5D4037"/>
+          <rect x="105" y="425" width="7" height="25" fill="#5D4037"/>
+          <rect x="90" y="395" width="22" height="35" rx="3" fill="#C2185B"/>
+          <rect x="80" y="400" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(-15 85 400)"/>
+          <rect x="112" y="400" width="10" height="25" rx="3" fill="#FDBCB4" transform="rotate(15 117 400)"/>
+          <circle cx="101" cy="385" r="13" fill="#FDBCB4"/>
+          <path d="M 89 380 Q 101 370 113 380 L 113 385 L 89 385 Z" fill="#5D4037"/>
+          <!-- Huso de hilar -->
+          <line x1="115" y1="410" x2="135" y2="430" stroke="#8D6E63" stroke-width="3"/>
+          <ellipse cx="135" cy="432" rx="8" ry="4" fill="#FFD54F"/>
+        </g>
+        
+        <!-- SEÑOR FEUDAL a caballo (imponente) -->
+        <g filter="url(#shadow-feu)">
+          <ellipse cx="700" cy="450" rx="30" ry="8" fill="black" opacity="0.3"/>
+          <!-- Caballo -->
+          <ellipse cx="700" cy="410" rx="45" ry="22" fill="#5D4037"/>
+          <circle cx="665" cy="395" r="15" fill="#5D4037"/>
+          <circle cx="660" cy="392" r="2" fill="black"/>
+          <circle cx="670" cy="392" r="2" fill="black"/>
+          <!-- Orejas -->
+          <polygon points="658,385 662,375 666,385" fill="#5D4037"/>
+          <polygon points="668,385 672,375 676,385" fill="#5D4037"/>
+          <!-- Crin -->
+          <path d="M 665 385 Q 660 395 665 405" stroke="#3E2723" stroke-width="3" fill="none"/>
+          <!-- Patas del caballo -->
+          <rect x="670" y="425" width="6" height="25" fill="#4E342E"/>
+          <rect x="685" y="425" width="6" height="25" fill="#4E342E"/>
+          <rect x="710" y="425" width="6" height="25" fill="#4E342E"/>
+          <rect x="725" y="425" width="6" height="25" fill="#4E342E"/>
+          <!-- Cola -->
+          <path d="M 745 405 Q 760 415 755 430" stroke="#3E2723" stroke-width="4" fill="none"/>
+          
+          <!-- Señor Feudal montado -->
+          <rect x="685" y="355" width="10" height="30" fill="#4E342E"/>
+          <rect x="700" y="355" width="10" height="30" fill="#4E342E"/>
+          <rect x="680" y="320" width="30" height="40" rx="3" fill="#4A148C"/>
+          <rect x="670" y="325" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-20 675 325)"/>
+          <rect x="710" y="325" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(20 715 325)"/>
+          <circle cx="695" cy="310" r="16" fill="#FDBCB4"/>
+          <!-- Corona -->
+          <polygon points="680,300 685,290 695,295 705,288 715,295 720,300" fill="#FFD700"/>
+          <circle cx="685" cy="295" r="2" fill="#D32F2F"/>
+          <circle cx="695" cy="292" r="2" fill="#1976D2"/>
+          <circle cx="705" cy="292" r="2" fill="#388E3C"/>
+          <circle cx="715" cy="295" r="2" fill="#D32F2F"/>
+          <!-- Capa -->
+          <path d="M 680 325 Q 670 360 675 390 L 720 390 Q 725 360 715 325 Z" fill="#D32F2F" opacity="0.8"/>
+          <!-- Espada -->
+          <line x1="715" y1="340" x2="735" y2="380" stroke="#9E9E9E" stroke-width="3"/>
+          <rect x="730" y="375" width="10" height="4" fill="#FFD700"/>
+        </g>
+        
+        <!-- Flecha de tributo (de siervos al castillo) -->
+        <path d="M 400 380 Q 500 340 600 300" stroke="#FF9800" stroke-width="4" fill="none" stroke-dasharray="8,4"/>
+        <polygon points="600,295 610,300 600,305" fill="#FF9800"/>
+        <text x="480" y="330" text-anchor="middle" font-size="16" font-weight="bold" fill="#FF9800" font-family="Poppins">TRIBUTO</text>
+        <text x="480" y="350" text-anchor="middle" font-size="12" fill="#FF9800" font-family="Poppins">(cosecha + trabajo)</text>
+        
+        <!-- Árboles de otoño -->
+        <g filter="url(#shadow-feu)">
+          <rect x="40" y="280" width="8" height="40" fill="#5D4037"/>
+          <circle cx="44" cy="270" r="22" fill="#FF9800"/>
+          <circle cx="35" cy="275" r="18" fill="#F57C00"/>
+          <circle cx="53" cy="275" r="18" fill="#FFB74D"/>
+        </g>
+        <g filter="url(#shadow-feu)">
+          <rect x="840" y="285" width="8" height="40" fill="#5D4037"/>
+          <circle cx="844" cy="275" r="22" fill="#FF9800"/>
+          <circle cx="835" cy="280" r="18" fill="#F57C00"/>
+          <circle cx="853" cy="280" r="18" fill="#FFB74D"/>
+        </g>
+        
+        <!-- Texto -->
+        <rect x="200" y="510" width="500" height="35" rx="17" fill="#FF9800" opacity="0.9"/>
+        <text x="450" y="533" text-anchor="middle" font-size="18" font-weight="bold" fill="white" font-family="Poppins">SIERVOS • SEÑOR FEUDAL • TRIBUTO EN ESPECIE</text>
+      </svg>
+      
+      <div class="scene-description feudalismo">
+        <h5>🔍 Análisis de la Escena:</h5>
+        <ul>
+          <li><strong>Castillo imponente:</strong> El señor feudal vive arriba, protegido y con lujo</li>
+          <li><strong>Siervos abajo:</strong> Trabajan la tierra del señor con herramientas primitivas</li>
+          <li><strong>Flecha de tributo:</strong> La cosecha va del campo al castillo (no es del siervo)</li>
+          <li><strong>Dependencia total:</strong> El siervo necesita "protección" del señor a cambio de su trabajo</li>
+          <li><strong>Sin movilidad social:</strong> El siervo nace y muere siervo, como su padre y abuelo</li>
+          <li><strong>Señor a caballo:</strong> Símbolo de poder militar y jerarquía social</li>
+        </ul>
+      </div>
+      
+      <div style="text-align:center; margin-top:15px;">
+        <span class="badge badge-orange">Siervos</span>
+        <span class="badge badge-orange">Señor Feudal</span>
+        <span class="badge badge-orange">Tributos</span>
+        <span class="badge badge-orange">Dependencia</span>
+      </div>
+    </div>
+
+    <!-- ILUSTRACIÓN 4: CAPITALISMO - MEJORADA -->
+    <div class="illustration-card capitalismo">
+      <h4 style="color:#2196F3;">🏭 CAPITALISMO - La Era del Salario y los Derechos (Siglo XVIII - Presente)</h4>
+      <svg class="svg-illustration" viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky-cap" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#B0BEC5;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ECEFF1;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="factory-cap" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#78909C;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#455A64;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="smoke-cap" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" style="stop-color:#757575;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#BDBDBD;stop-opacity:0.2" />
+          </linearGradient>
+          <filter id="shadow-cap">
+            <feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.3"/>
+          </filter>
+        </defs>
+        
+        <!-- Cielo industrial -->
+        <rect width="900" height="550" fill="url(#sky-cap)"/>
+        
+        <!-- Sol tenue (contaminación) -->
+        <circle cx="780" cy="80" r="45" fill="#FFF9C4" opacity="0.6"/>
+        <circle cx="780" cy="80" r="65" fill="#FFF9C4" opacity="0.3"/>
+        
+        <!-- Nubes de smog -->
+        <ellipse cx="200" cy="100" rx="60" ry="25" fill="#9E9E9E" opacity="0.5"/>
+        <ellipse cx="240" cy="90" rx="50" ry="22" fill="#9E9E9E" opacity="0.4"/>
+        <ellipse cx="500" cy="110" rx="70" ry="28" fill="#9E9E9E" opacity="0.5"/>
+        <ellipse cx="550" cy="100" rx="55" ry="22" fill="#9E9E9E" opacity="0.4"/>
+        
+        <!-- FÁBRICA GRANDE (izquierda) -->
+        <g filter="url(#shadow-cap)">
+          <!-- Edificio principal -->
+          <rect x="80" y="200" width="320" height="200" fill="url(#factory-cap)"/>
+          
+          <!-- Techo con dientes de sierra -->
+          <polygon points="80,200 120,170 160,200 200,170 240,200 280,170 320,200 360,170 400,200" fill="#37474F"/>
+          
+          <!-- Chimeneas -->
+          <rect x="130" y="120" width="30" height="100" fill="#546E7A"/>
+          <rect x="250" y="120" width="30" height="100" fill="#546E7A"/>
+          <rect x="350" y="120" width="30" height="100" fill="#546E7A"/>
+          
+          <!-- Humo de chimeneas -->
+          <g opacity="0.7">
+            <circle cx="145" cy="100" r="20" fill="url(#smoke-cap)"/>
+            <circle cx="150" cy="80" r="25" fill="url(#smoke-cap)"/>
+            <circle cx="155" cy="60" r="30" fill="url(#smoke-cap)"/>
+            <circle cx="160" cy="40" r="35" fill="url(#smoke-cap)" opacity="0.5"/>
+            
+            <circle cx="265" cy="100" r="20" fill="url(#smoke-cap)"/>
+            <circle cx="270" cy="80" r="25" fill="url(#smoke-cap)"/>
+            <circle cx="275" cy="60" r="30" fill="url(#smoke-cap)"/>
+            <circle cx="280" cy="40" r="35" fill="url(#smoke-cap)" opacity="0.5"/>
+            
+            <circle cx="365" cy="100" r="20" fill="url(#smoke-cap)"/>
+            <circle cx="370" cy="80" r="25" fill="url(#smoke-cap)"/>
+            <circle cx="375" cy="60" r="30" fill="url(#smoke-cap)"/>
+            <circle cx="380" cy="40" r="35" fill="url(#smoke-cap)" opacity="0.5"/>
+          </g>
+          
+          <!-- Ventanas iluminadas (turno de trabajo) -->
+          <rect x="110" y="230" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="160" y="230" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="210" y="230" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="260" y="230" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="310" y="230" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="360" y="230" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          
+          <rect x="110" y="290" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="160" y="290" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="210" y="290" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="260" y="290" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="310" y="290" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          <rect x="360" y="290" width="35" height="45" fill="#FFF9C4" opacity="0.9"/>
+          
+          <!-- Puerta grande de la fábrica -->
+          <rect x="200" y="330" width="80" height="70" fill="#37474F"/>
+          <rect x="210" y="340" width="60" height="60" fill="#263238"/>
+          
+          <!-- Engranajes visibles -->
+          <circle cx="150" cy="360" r="25" fill="none" stroke="#263238" stroke-width="5"/>
+          <circle cx="150" cy="360" r="8" fill="#263238"/>
+          <line x1="150" y1="335" x2="150" y2="345" stroke="#263238" stroke-width="3"/>
+          <line x1="150" y1="375" x2="150" y2="385" stroke="#263238" stroke-width="3"/>
+          <line x1="125" y1="360" x2="135" y2="360" stroke="#263238" stroke-width="3"/>
+          <line x1="165" y1="360" x2="175" y2="360" stroke="#263238" stroke-width="3"/>
+          
+          <circle cx="200" cy="360" r="25" fill="none" stroke="#263238" stroke-width="5"/>
+          <circle cx="200" cy="360" r="8" fill="#263238"/>
+          <line x1="200" y1="335" x2="200" y2="345" stroke="#263238" stroke-width="3"/>
+          <line x1="200" y1="375" x2="200" y2="385" stroke="#263238" stroke-width="3"/>
+          <line x1="175" y1="360" x2="185" y2="360" stroke="#263238" stroke-width="3"/>
+          <line x1="215" y1="360" x2="225" y2="360" stroke="#263238" stroke-width="3"/>
+          
+          <!-- Letrero de la fábrica -->
+          <rect x="150" y="205" width="180" height="25" fill="#263238"/>
+          <text x="240" y="223" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFF9C4" font-family="Poppins">FÁBRICA TEXTIL S.A.</text>
+        </g>
+        
+        <!-- OBREROS (grupo, uniformados) -->
+        
+        <!-- Obrero 1: Con casco y herramienta -->
+        <g filter="url(#shadow-cap)">
+          <ellipse cx="480" cy="460" rx="20" ry="5" fill="black" opacity="0.3"/>
+          <rect x="472" y="420" width="8" height="35" fill="#1565C0"/>
+          <rect x="485" y="420" width="8" height="35" fill="#1565C0"/>
+          <rect x="470" y="385" width="25" height="40" rx="3" fill="#1976D2"/>
+          <rect x="460" y="390" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-20 465 390)"/>
+          <rect x="495" y="390" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(20 500 390)"/>
+          <circle cx="482" cy="375" r="14" fill="#FDBCB4"/>
+          <!-- Casco amarillo -->
+          <path d="M 468 370 Q 482 360 496 370 L 496 375 L 468 375 Z" fill="#FFD700"/>
+          <rect x="468" y="373" width="28" height="3" fill="#FFD700"/>
+          <!-- Llave inglesa -->
+          <line x1="495" y1="400" x2="515" y2="430" stroke="#757575" stroke-width="4"/>
+          <rect x="510" y="425" width="12" height="8" fill="#757575" rx="2"/>
+        </g>
+        
+        <!-- Obrero 2: Con caja de herramientas -->
+        <g filter="url(#shadow-cap)">
+          <ellipse cx="550" cy="465" rx="20" ry="5" fill="black" opacity="0.3"/>
+          <rect x="542" y="425" width="8" height="35" fill="#1565C0"/>
+          <rect x="555" y="425" width="8" height="35" fill="#1565C0"/>
+          <rect x="540" y="390" width="25" height="40" rx="3" fill="#1976D2"/>
+          <rect x="530" y="395" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-15 535 395)"/>
+          <rect x="565" y="395" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(15 570 395)"/>
+          <circle cx="552" cy="380" r="14" fill="#FDBCB4"/>
+          <path d="M 538 375 Q 552 365 566 375 L 566 380 L 538 380 Z" fill="#FFD700"/>
+          <rect x="538" y="378" width="28" height="3" fill="#FFD700"/>
+          <!-- Caja de herramientas -->
+          <rect x="570" y="415" width="25" height="20" fill="#D32F2F" rx="2"/>
+          <line x1="575" y1="415" x2="590" y2="415" stroke="#B71C1C" stroke-width="2"/>
+        </g>
+        
+        <!-- Obrero 3: Mujer obrera -->
+        <g filter="url(#shadow-cap)">
+          <ellipse cx="620" cy="470" rx="20" ry="5" fill="black" opacity="0.3"/>
+          <rect x="612" y="430" width="8" height="35" fill="#1565C0"/>
+          <rect x="625" y="430" width="8" height="35" fill="#1565C0"/>
+          <rect x="610" y="395" width="25" height="40" rx="3" fill="#1976D2"/>
+          <rect x="600" y="400" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-15 605 400)"/>
+          <rect x="635" y="400" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(15 640 400)"/>
+          <circle cx="622" cy="385" r="14" fill="#FDBCB4"/>
+          <path d="M 608 380 Q 622 370 636 380 L 636 385 L 608 385 Z" fill="#FFD700"/>
+          <rect x="608" y="383" width="28" height="3" fill="#FFD700"/>
+          <!-- Cabello largo -->
+          <path d="M 610 380 Q 605 395 610 405" stroke="#3E2723" stroke-width="3" fill="none"/>
+          <path d="M 634 380 Q 639 395 634 405" stroke="#3E2723" stroke-width="3" fill="none"/>
+        </g>
+        
+        <!-- Obrero 4: Con planos -->
+        <g filter="url(#shadow-cap)">
+          <ellipse cx="430" cy="465" rx="20" ry="5" fill="black" opacity="0.3"/>
+          <rect x="422" y="425" width="8" height="35" fill="#1565C0"/>
+          <rect x="435" y="425" width="8" height="35" fill="#1565C0"/>
+          <rect x="420" y="390" width="25" height="40" rx="3" fill="#1976D2"/>
+          <rect x="410" y="395" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(-20 415 395)"/>
+          <rect x="445" y="395" width="10" height="30" rx="3" fill="#FDBCB4" transform="rotate(20 450 395)"/>
+          <circle cx="432" cy="380" r="14" fill="#FDBCB4"/>
+          <path d="M 418 375 Q 432 365 446 375 L 446 380 L 418 380 Z" fill="#FFD700"/>
+          <rect x="418" y="378" width="28" height="3" fill="#FFD700"/>
+          <!-- Planos enrollados -->
+          <rect x="445" y="405" width="8" height="25" fill="#FFF9C4" rx="2"/>
+          <rect x="450" y="408" width="6" height="22" fill="#FFF9C4" rx="2"/>
+        </g>
+        
+        <!-- CAPITALISTA (derecha, imponente, diferente) -->
+        <g filter="url(#shadow-cap)">
+          <ellipse cx="760" cy="460" rx="25" ry="7" fill="black" opacity="0.3"/>
+          <!-- Piernas con pantalón formal -->
+          <rect x="748" y="415" width="10" height="40" fill="#212121"/>
+          <rect x="765" y="415" width="10" height="40" fill="#212121"/>
+          <!-- Zapatos brillantes -->
+          <ellipse cx="753" cy="457" rx="8" ry="4" fill="#000000"/>
+          <ellipse cx="770" cy="457" rx="8" ry="4" fill="#000000"/>
+          <!-- Cuerpo con traje -->
+          <rect x="743" y="370" width="35" height="50" rx="3" fill="#212121"/>
+          <!-- Camisa blanca -->
+          <polygon points="755,370 760,390 765,370" fill="white"/>
+          <!-- Corbata roja -->
+          <polygon points="758,375 760,400 762,375" fill="#D32F2F"/>
+          <!-- Solapas del saco -->
+          <polygon points="743,370 750,390 743,395" fill="#424242"/>
+          <polygon points="778,370 771,390 778,395" fill="#424242"/>
+          <!-- Brazos -->
+          <rect x="733" y="375" width="10" height="35" rx="3" fill="#212121" transform="rotate(-15 738 375)"/>
+          <rect x="778" y="375" width="10" height="35" rx="3" fill="#212121" transform="rotate(15 783 375)"/>
+          <!-- Manos -->
+          <circle cx="730" cy="410" r="6" fill="#FDBCB4"/>
+          <circle cx="790" cy="410" r="6" fill="#FDBCB4"/>
+          <!-- Cabeza -->
+          <circle cx="760" cy="358" r="18" fill="#FDBCB4"/>
+          <!-- Cabello peinado -->
+          <path d="M 743 355 Q 760 345 777 355 Q 777 350 760 347 Q 743 350 743 355" fill="#3E2723"/>
+          <!-- Bigote -->
+          <path d="M 752 365 Q 760 368 768 365" stroke="#3E2723" stroke-width="2" fill="none"/>
+          <!-- Sombrero de copa -->
+          <rect x="748" y="330" width="24" height="20" fill="#000000"/>
+          <rect x="743" y="347" width="34" height="5" fill="#000000"/>
+          <rect x="750" y="335" width="20" height="3" fill="#D32F2F"/>
+          <!-- Maletín de cuero -->
+          <rect x="790" y="400" width="30" height="25" fill="#5D4037" rx="2"/>
+          <line x1="795" y1="400" x2="815" y2="400" stroke="#3E2723" stroke-width="3"/>
+          <circle cx="805" cy="412" r="2" fill="#FFD700"/>
+          <!-- Billetes saliendo del maletín -->
+          <rect x="795" y="395" width="20" height="8" fill="#4CAF50" transform="rotate(-15 805 399)"/>
+          <text x="805" y="401" text-anchor="middle" font-size="6" fill="white" font-weight="bold">$</text>
+          <rect x="800" y="390" width="20" height="8" fill="#4CAF50" transform="rotate(10 810 394)"/>
+          <text x="810" y="396" text-anchor="middle" font-size="6" fill="white" font-weight="bold">$</text>
+          <!-- Reloj de bolsillo (cadena) -->
+          <circle cx="755" cy="395" r="4" fill="#FFD700"/>
+          <line x1="755" y1="395" x2="760" y2="385" stroke="#FFD700" stroke-width="1"/>
+        </g>
+        
+        <!-- Flecha de SALARIO (del capitalista a los obreros) -->
+        <path d="M 740 410 Q 650 420 560 430" stroke="#4CAF50" stroke-width="4" fill="none" stroke-dasharray="8,4"/>
+        <polygon points="560,425 550,430 560,435" fill="#4CAF50"/>
+        <text x="640" y="445" text-anchor="middle" font-size="16" font-weight="bold" fill="#4CAF50" font-family="Poppins">SALARIO</text>
+        
+        <!-- Flecha de PLUSVALÍA (de los obreros al capitalista) -->
+        <path d="M 500 400 Q 620 380 740 380" stroke="#FF9800" stroke-width="4" fill="none" stroke-dasharray="8,4"/>
+        <polygon points="740,375 750,380 740,385" fill="#FF9800"/>
+        <text x="620" y="370" text-anchor="middle" font-size="16" font-weight="bold" fill="#FF9800" font-family="Poppins">PLUSVALÍA (ganancia)</text>
+        
+        <!-- Reloj de la fábrica (jornada laboral) -->
+        <g filter="url(#shadow-cap)">
+          <circle cx="420" cy="250" r="25" fill="white" stroke="#263238" stroke-width="3"/>
+          <line x1="420" y1="250" x2="420" y2="235" stroke="#263238" stroke-width="3" stroke-linecap="round"/>
+          <line x1="420" y1="250" x2="432" y2="250" stroke="#263238" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="420" cy="250" r="3" fill="#D32F2F"/>
+          <text x="420" y="290" text-anchor="middle" font-size="10" fill="#263238" font-family="Poppins">8:00 AM</text>
+        </g>
+        
+        <!-- Texto -->
+        <rect x="200" y="510" width="500" height="35" rx="17" fill="#2196F3" opacity="0.9"/>
+        <text x="450" y="533" text-anchor="middle" font-size="18" font-weight="bold" fill="white" font-family="Poppins">OBREROS ASALARIADOS • CAPITALISTAS • DERECHOS LABORALES</text>
+      </svg>
+      
+      <div class="scene-description capitalismo">
+        <h5>🔍 Análisis de la Escena:</h5>
+        <ul>
+          <li><strong>Fábrica industrial:</strong> Medio de producción privado, propiedad del capitalista</li>
+          <li><strong>Obreros uniformados:</strong> Venden su fuerza de trabajo por un salario (casco azul)</li>
+          <li><strong>Capitalista con traje:</strong> Dueño de la fábrica, no trabaja físicamente, recibe la plusvalía</li>
+          <li><strong>Flecha verde (Salario):</strong> Pago que recibe el obrero por su trabajo</li>
+          <li><strong>Flecha naranja (Plusvalía):</strong> Valor excedente que se apropia el capitalista como ganancia</li>
+          <li><strong>Reloj 8:00 AM:</strong> Jornada laboral regulada (conquista histórica)</li>
+          <li><strong>Derechos laborales:</strong> Los obreros pueden sindicalizarse y exigir mejoras (no existía antes)</li>
+        </ul>
+      </div>
+      
+      <div style="text-align:center; margin-top:15px;">
+        <span class="badge badge-blue">Obreros</span>
+        <span class="badge badge-blue">Capitalistas</span>
+        <span class="badge badge-blue">Salario</span>
+        <span class="badge badge-blue">Plusvalía</span>
+        <span class="badge badge-blue">Derechos laborales</span>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN: ESTADÍSTICAS ACTUALES -->
+    <!-- ============================================ -->
+    <div class="stats-section">
+      <h3>📊 ¿Cuántos "Siervos", "Esclavos" y "Señores Feudales" Hay Hoy?</h3>
+      <p style="text-align:center; font-size:1.1em; margin-bottom:25px; opacity:0.9;">Aunque estos sistemas históricos "oficiales" desaparecieron, sus equivalentes modernos aún existen</p>
+
+      <div class="stats-grid">
+        <!-- Esclavitud Moderna -->
+        <div class="stat-card">
+          <div style="font-size:3em;">⛓️</div>
+          <div class="stat-label">Esclavitud Moderna</div>
+          <div class="stat-number" style="color:#f44336;">~50 millones</div>
+          <div class="stat-description">Personas en trabajo forzoso o matrimonio forzado (OIT, 2022)</div>
+          <div style="margin-top:10px; font-size:0.85em; background:rgba(244,67,54,0.3); padding:8px; border-radius:8px;">
+            <strong>0.6%</strong> de la población mundial
+          </div>
+        </div>
+
+        <!-- Trabajo Informal (Siervos modernos) -->
+        <div class="stat-card">
+          <div style="font-size:3em;">🏚️</div>
+          <div class="stat-label">Trabajo Informal (Siervos modernos)</div>
+          <div class="stat-number" style="color:#FF9800;">~2,000 millones</div>
+          <div class="stat-description">Trabajadores sin protección social, sin contrato, sin prestaciones (OIT, 2023)</div>
+          <div style="margin-top:10px; font-size:0.85em; background:rgba(255,152,0,0.3); padding:8px; border-radius:8px;">
+            <strong>60%</strong> de la población ocupada mundial<br>
+            <strong>54%</strong> en América Latina
+          </div>
+        </div>
+
+        <!-- Desigualdad extrema (Señores feudales modernos) -->
+        <div class="stat-card">
+          <div style="font-size:3em;"></div>
+          <div class="stat-label">"Señores Feudales" Modernos</div>
+          <div class="stat-number" style="color:#FFD700;">~59 millones</div>
+          <div class="stat-description">Millonarios que controlan la mayor parte de la riqueza mundial</div>
+          <div style="margin-top:10px; font-size:0.85em; background:rgba(255,215,0,0.3); padding:8px; border-radius:8px;">
+            El <strong>1%</strong> más rico posee el <strong>45%</strong> de la riqueza mundial<br>
+            (Credit Suisse, 2023)
+          </div>
+        </div>
+
+        <!-- Comunidades comunales -->
+        <div class="stat-card">
+          <div style="font-size:3em;">️</div>
+          <div class="stat-label">Comunidades con Prácticas Comunales</div>
+          <div class="stat-number" style="color:#4CAF50;">~476 millones</div>
+          <div class="stat-description">Pueblos indígenas que mantienen formas de producción colectiva (ONU, 2023)</div>
+          <div style="margin-top:10px; font-size:0.85em; background:rgba(76,175,80,0.3); padding:8px; border-radius:8px;">
+            <strong>6%</strong> de la población mundial<br>
+            <strong>19%</strong> de los pobres extremos
+          </div>
+        </div>
+
+        <!-- Obreros formales -->
+        <div class="stat-card">
+          <div style="font-size:3em;"></div>
+          <div class="stat-label">Obreros con Derechos Plenos</div>
+          <div class="stat-number" style="color:#2196F3;">~1,200 millones</div>
+          <div class="stat-description">Trabajadores formales con contrato, seguridad social y prestaciones</div>
+          <div style="margin-top:10px; font-size:0.85em; background:rgba(33,150,243,0.3); padding:8px; border-radius:8px;">
+            <strong>35%</strong> de la población ocupada mundial<br>
+            <strong>28%</strong> en América Latina
+          </div>
+        </div>
+
+        <!-- Desempleo -->
+        <div class="stat-card">
+          <div style="font-size:3em;">😔</div>
+          <div class="stat-label">Desempleo Global</div>
+          <div class="stat-number" style="color:#9C27B0;">~192 millones</div>
+          <div class="stat-description">Personas sin trabajo que buscan empleo activamente (OIT, 2023)</div>
+          <div style="margin-top:10px; font-size:0.85em; background:rgba(156,39,176,0.3); padding:8px; border-radius:8px;">
+            <strong>5.1%</strong> de la fuerza laboral mundial
+          </div>
+        </div>
+      </div>
+
+      <p class="source-note">📚 Fuentes: Organización Internacional del Trabajo (OIT), Credit Suisse Global Wealth Report, ONU - Departamento de Asuntos Económicos y Sociales (2022-2023)</p>
+    </div>
+
+    <!-- EQUIVALENCIAS MODERNAS -->
+    <div class="modern-equivalence">
+      <h4>🔄 Equivalencias entre Sistemas Históricos y Realidad Actual</h4>
+      <p style="color:#666; margin-bottom:15px;">Así se traducen los sistemas del pasado al presente:</p>
+
+      <div class="equivalence-row">
+        <div class="equivalence-icon">⛓️</div>
+        <div class="equivalence-content">
+          <strong>Esclavo → Trabajador en condiciones análogas a la esclavitud</strong>
+          <p style="font-size:0.9em; color:#666; margin-top:5px;">Trabajo forzoso, trata de personas, trabajo infantil explotador. Hoy existen ~50 millones de personas en esta condición, principalmente en agricultura, construcción y trabajo doméstico.</p>
+        </div>
+      </div>
+
+      <div class="equivalence-row">
+        <div class="equivalence-icon">🏚️</div>
+        <div class="equivalence-content">
+          <strong>Siervo → Trabajador informal sin protección</strong>
+          <p style="font-size:0.9em; color:#666; margin-top:5px;">Como el siervo dependía del señor feudal, el trabajador informal depende completamente del empleador sin red de protección. Sin contrato, sin salud, sin pensión. ~60% de trabajadores en el mundo.</p>
+        </div>
+      </div>
+
+      <div class="equivalence-row">
+        <div class="equivalence-icon">👑</div>
+        <div class="equivalence-content">
+          <strong>Señor Feudal → Multimillonarios y grandes corporaciones</strong>
+          <p style="font-size:0.9em; color:#666; margin-top:5px;">El 1% más rico controla el 45% de la riqueza mundial. 8 personas poseen lo mismo que la mitad más pobre de la humanidad (3,800 millones de personas).</p>
+        </div>
+      </div>
+
+      <div class="equivalence-row">
+        <div class="equivalence-icon">🏕️</div>
+        <div class="equivalence-content">
+          <strong>Hombre Libre/Patricio → Comunidades indígenas y cooperativas</strong>
+          <p style="font-size:0.9em; color:#666; margin-top:5px;">Pueblos originarios que mantienen la propiedad colectiva de la tierra y el trabajo comunitario. ~476 millones de personas en el mundo.</p>
+        </div>
+      </div>
+
+      <div class="equivalence-row">
+        <div class="equivalence-icon">🏭</div>
+        <div class="equivalence-content">
+          <strong>Obrero asalariado → Trabajador formal con derechos</strong>
+          <p style="font-size:0.9em; color:#666; margin-top:5px;">Trabajador con contrato, seguridad social, prestaciones y derecho a sindicalizarse. Solo el 35% de la población ocupada mundial tiene esta condición.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRÁFICO DE DISTRIBUCIÓN -->
+    <div class="modern-equivalence">
+      <h4>📊 Distribución Mundial de Condiciones Laborales (2024)</h4>
+      
+      <div class="pie-chart-container">
+        <svg width="300" height="300" viewBox="0 0 300 300">
+          <!-- Trabajo informal (60%) - Naranja -->
+          <path d="M 150 150 L 150 30 A 120 120 0 0 1 266 198 Z" fill="#FF9800"/>
+          <!-- Desempleo (5%) - Morado -->
+          <path d="M 150 150 L 266 198 A 120 120 0 0 1 228 266 Z" fill="#9C27B0"/>
+          <!-- Esclavitud moderna (0.6%) - Rojo -->
+          <path d="M 150 150 L 228 266 A 120 120 0 0 1 225 268 Z" fill="#f44336"/>
+          <!-- Comunidades comunales (6%) - Verde -->
+          <path d="M 150 150 L 225 268 A 120 120 0 0 1 102 266 Z" fill="#4CAF50"/>
+          <!-- Obreros formales (28%) - Azul -->
+          <path d="M 150 150 L 102 266 A 120 120 0 0 1 150 30 Z" fill="#2196F3"/>
+          
+          <!-- Centro -->
+          <circle cx="150" cy="150" r="50" fill="white"/>
+          <text x="150" y="145" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">POBLACIÓN</text>
+          <text x="150" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">OCUPADA</text>
+        </svg>
+
+        <div class="pie-legend">
+          <div class="legend-item">
+            <div class="legend-color" style="background:#FF9800;"></div>
+            <div><strong>60%</strong> - Trabajo informal (Siervos modernos)</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background:#2196F3;"></div>
+            <div><strong>28%</strong> - Obreros formales con derechos</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background:#4CAF50;"></div>
+            <div><strong>6%</strong> - Comunidades comunales</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background:#9C27B0;"></div>
+            <div><strong>5.1%</strong> - Desempleo</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background:#f44336;"></div>
+            <div><strong>0.6%</strong> - Esclavitud moderna</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="warning-box" style="margin-top:20px;">
+        <strong>⚠️ Reflexión importante:</strong> Aunque vivimos en el sistema capitalista "oficialmente", la realidad muestra que la mayoría de trabajadores en el mundo (60%) viven en condiciones similares a la servidumbre feudal: sin contrato, sin protección social, sin derechos laborales plenos. ¡La lucha por el trabajo digno continúa!
+      </div>
+    </div>
+
+    <!-- DATOS DE AMÉRICA LATINA -->
+    <div class="modern-equivalence">
+      <h4>🌎 América Latina: La Región Más Desigual del Mundo</h4>
+      
+      <div class="grid-2" style="margin-top:20px;">
+        <div style="background:linear-gradient(135deg, #ffebee, #ffcdd2); padding:20px; border-radius:15px;">
+          <h4 style="color:#c62828;">🚨 Problemas Actuales</h4>
+          <ul style="margin-left:20px; margin-top:10px; line-height:1.8;">
+            <li><strong>54%</strong> de trabajadores en informalidad</li>
+            <li><strong>1 de cada 4</strong> jóvenes ni estudia ni trabaja</li>
+            <li><strong>Coeficiente Gini:</strong> 0.46 (alta desigualdad)</li>
+            <li><strong>20%</strong> más rico gana 20x más que el 20% más pobre</li>
+            <li><strong>47 millones</strong> en pobreza extrema</li>
+          </ul>
+        </div>
+        <div style="background:linear-gradient(135deg, #e8f5e9, #c8e6c9); padding:20px; border-radius:15px;">
+          <h4 style="color:#2e7d32;">✅ Avances Recientes</h4>
+          <ul style="margin-left:20px; margin-top:10px; line-height:1.8;">
+            <li><strong>Leyes de formalización</strong> en varios países</li>
+            <li><strong>Salario mínimo</strong> en todos los países</li>
+            <li><strong>Sistemas de salud</strong> universales (en teoría)</li>
+            <li><strong>Derecho a sindicalización</strong> reconocido</li>
+            <li><strong>Protección al trabajo</strong> de plataformas digitales</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="success-box" style="margin-top:20px;">
+        <strong>💡 Conclusión:</strong> El estudio del derecho laboral y el capital humano no es solo teoría: es una herramienta para transformar la realidad. Cada contrato formal, cada prestación social pagada, cada trabajador protegido es un paso hacia la dignidad humana. ¡Tú puedes ser parte del cambio!
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// Datos de escenarios Módulo 1
+const scenarios = [
+  { text: "Juan firma prestación de servicios, pero debe entrar a las 8 AM, salir a las 5 PM y su jefe le aprueba los días de vacaciones.", answer: "Contrato Realidad", explanation: "Hay horario fijo, subordinación y salario = Contrato laboral real, aunque el papel diga otra cosa." },
+  { text: "María es contratada por 6 meses para reemplazar una licencia de maternidad.", answer: "Término Fijo", explanation: "Reemplazo temporal con fecha definida = Contrato a Término Fijo legítimo." },
+  { text: "Pedro, estudiante, trabaja 4 horas diarias en la fábrica por un auxilio del SENA.", answer: "Contrato de Aprendizaje", explanation: "Estudiante con auxilio de sostenimiento del SENA = Contrato de Aprendizaje formativo." },
+  { text: "La empresa exige a un programador externo que use el uniforme y asista a la reunión de los lunes a las 7 AM.", answer: "Contrato Realidad", explanation: "Uniforme y horario impuesto = Subordinación = Fraude si es prestación de servicios." },
+  { text: "Ana firma prestación de servicios como consultora, pero recibe órdenes diarias de su supervisor y debe reportar cada hora.", answer: "Contrato Realidad", explanation: "Órdenes diarias y reportes = Subordinación absoluta = Contrato laboral real." },
+  { text: "Carlos es contratado por obra o labor para construir una casa; al terminar, la empresa lo reubica en otra construcción sin nuevo contrato.", answer: "Contrato Realidad (Indefinido)", explanation: "Al terminar una obra y continuar en otra sin nuevo contrato = Se transforma en indefinido." },
+  { text: "Luisa trabaja como mesera solo los fines de semana y le pagan por día trabajado, sin contrato escrito.", answer: "Contrato Realidad", explanation: "Prestación personal + subordinación + salario = Contrato real aunque no esté escrito." },
+  { text: "Una empresa obliga a sus empleados a crear una cooperativa de trabajo asociado para seguir haciendo las mismas funciones.", answer: "Contrato Realidad (Fraude)", explanation: "Cooperativa falsa para evadir prestaciones = Fraude laboral, sigue siendo relación laboral." },
+  { text: "José es contratado como 'practicante' pero realiza las mismas tareas que un empleado de tiempo completo y recibe solo un auxilio de transporte.", answer: "Contrato Realidad", explanation: "Mismas funciones que empleado regular = Debe tener contrato laboral con todas las prestaciones." },
+  { text: "A un repartidor de aplicación se le exige cumplir horario, usar uniforme y asistir a capacitaciones obligatorias sin pago.", answer: "Contrato Realidad", explanation: "Horario, uniforme y capacitaciones obligatorias = Subordinación = Relación laboral real." }
+];
+
+let currentScenario = 0;
+let score1 = 0;
+let answered1 = new Set();
+
+function renderScenarios() {
+  const container = document.getElementById('scenarios-container');
+  container.innerHTML = '';
+  scenarios.forEach((s, i) => {
+    const div = document.createElement('div');
+    div.className = 'scenario';
+    div.innerHTML = `
+      <div class="scenario-text"><strong>Caso ${i+1}:</strong> ${s.text}</div>
+      <div class="answer-options">
+        <button class="answer-btn" onclick="checkAnswer1(${i}, 'Contrato Realidad', this)">Contrato Realidad</button>
+        <button class="answer-btn" onclick="checkAnswer1(${i}, 'Término Fijo', this)">Término Fijo</button>
+        <button class="answer-btn" onclick="checkAnswer1(${i}, 'Contrato de Aprendizaje', this)">Aprendizaje</button>
+        <button class="answer-btn" onclick="checkAnswer1(${i}, 'Prestación de Servicios', this)">Prestación de Servicios</button>
+      </div>
+      <div class="feedback" id="feedback1-${i}"></div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function checkAnswer1(index, answer, btn) {
+  if (answered1.has(index)) return;
+  answered1.add(index);
+  
+  const scenario = scenarios[index];
+  const feedback = document.getElementById(`feedback1-${index}`);
+  const isCorrect = answer === scenario.answer;
+  
+  if (isCorrect) {
+    score1++;
+    btn.classList.add('correct');
+    feedback.className = 'feedback show correct';
+    feedback.innerHTML = `✅ ¡Correcto! ${scenario.explanation}`;
+  } else {
+    btn.classList.add('wrong');
+    feedback.className = 'feedback show wrong';
+    feedback.innerHTML = `❌ Incorrecto. La respuesta es: <strong>${scenario.answer}</strong>. ${scenario.explanation}`;
+  }
+  
+  const progress = (answered1.size / scenarios.length) * 100;
+  document.getElementById('progress1').style.width = progress + '%';
+  document.getElementById('progress1').textContent = Math.round(progress) + '%';
+  
+  if (answered1.size === scenarios.length) {
+    document.getElementById('score1').style.display = 'block';
+    document.getElementById('score-text').textContent = `Obtuviste ${score1} de ${scenarios.length} correctas (${Math.round(score1/scenarios.length*100)}%)`;
+  }
+}
+
+function resetQuiz1() {
+  currentScenario = 0;
+  score1 = 0;
+  answered1.clear();
+  document.getElementById('score1').style.display = 'none';
+  document.getElementById('progress1').style.width = '0%';
+  document.getElementById('progress1').textContent = '0%';
+  renderScenarios();
+}
+
+// Datos Módulo 2
+const payrollItems = [
+  { text: "Salario de la costurera que ensambla camisas", answer: "Costo Directo (MOD)", nature: "Salario" },
+  { text: "Prima de servicios del Supervisor de Calidad en la planta", answer: "CIF (MOI)", nature: "Prestación" },
+  { text: "Aporte al ICBF y SENA por el vendedor de la ruta Bogotá", answer: "Gasto Ventas", nature: "Seguridad Social" },
+  { text: "Salario del Director Financiero (CFO)", answer: "Gasto Admin", nature: "Salario" },
+  { text: "Vacaciones del operario de la máquina de corte", answer: "Costo Directo (MOD)", nature: "Prestación" },
+  { text: "Horas extras del operario de empaque", answer: "Costo Directo (MOD)", nature: "Salario" },
+  { text: "Cesantías del gerente general", answer: "Gasto Admin", nature: "Prestación" },
+  { text: "ARL del supervisor de planta", answer: "CIF (MOI)", nature: "Seguridad Social" },
+  { text: "Salario del vendedor de tienda", answer: "Gasto Ventas", nature: "Salario" },
+  { text: "Aporte a pensión del contador", answer: "Gasto Admin", nature: "Seguridad Social" }
+];
+
+let currentPayroll = 0;
+let score2 = 0;
+let answered2 = new Set();
+
+function renderPayroll() {
+  const container = document.getElementById('payroll-container');
+  container.innerHTML = '';
+  payrollItems.forEach((p, i) => {
+    const div = document.createElement('div');
+    div.className = 'scenario';
+    div.innerHTML = `
+      <div class="scenario-text"><strong>Concepto ${i+1}:</strong> "${p.text}"</div>
+      <div class="answer-options">
+        <button class="answer-btn" onclick="checkAnswer2(${i}, 'Costo Directo (MOD)', this)">Costo Directo (MOD)</button>
+        <button class="answer-btn" onclick="checkAnswer2(${i}, 'CIF (MOI)', this)">CIF (MOI)</button>
+        <button class="answer-btn" onclick="checkAnswer2(${i}, 'Gasto Ventas', this)">Gasto Ventas</button>
+        <button class="answer-btn" onclick="checkAnswer2(${i}, 'Gasto Admin', this)">Gasto Admin</button>
+      </div>
+      <div class="feedback" id="feedback2-${i}"></div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function checkAnswer2(index, answer, btn) {
+  if (answered2.has(index)) return;
+  answered2.add(index);
+  
+  const item = payrollItems[index];
+  const feedback = document.getElementById(`feedback2-${index}`);
+  const isCorrect = answer === item.answer;
+  
+  if (isCorrect) {
+    score2++;
+    btn.classList.add('correct');
+    feedback.className = 'feedback show correct';
+    feedback.innerHTML = `✅ ¡Correcto! Naturaleza: ${item.nature}`;
+  } else {
+    btn.classList.add('wrong');
+    feedback.className = 'feedback show wrong';
+    feedback.innerHTML = `❌ Incorrecto. La respuesta es: <strong>${item.answer}</strong>. Naturaleza: ${item.nature}`;
+  }
+  
+  const progress = (answered2.size / payrollItems.length) * 100;
+  document.getElementById('progress2').style.width = progress + '%';
+  document.getElementById('progress2').textContent = Math.round(progress) + '%';
+  
+  if (answered2.size === payrollItems.length) {
+    document.getElementById('score2').style.display = 'block';
+    document.getElementById('score-text2').textContent = `Obtuviste ${score2} de ${payrollItems.length} correctas (${Math.round(score2/payrollItems.length*100)}%)`;
+  }
+}
+
+function resetQuiz2() {
+  score2 = 0;
+  answered2.clear();
+  document.getElementById('score2').style.display = 'none';
+  document.getElementById('progress2').style.width = '0%';
+  document.getElementById('progress2').textContent = '0%';
+  renderPayroll();
+}
+
+function calculatePrestacional() {
+  const salary = parseFloat(document.getElementById('salary').value);
+  const factor = parseFloat(document.getElementById('factor').value);
+  
+  if (isNaN(salary) || isNaN(factor)) {
+    alert('Por favor ingresa valores válidos');
+    return;
+  }
+  
+  const prestacional = salary * (factor / 100);
+  const totalCost = salary + prestacional;
+  
+  document.getElementById('calc-output').innerHTML = `
+    <p><strong>Salario Básico:</strong> $${salary.toLocaleString()}</p>
+    <p><strong>Factor Prestacional (${factor}%):</strong> $${prestacional.toLocaleString()}</p>
+    <p style="font-size:1.2em; margin-top:15px; padding:10px; background:#e8f5e9; border-radius:8px;"><strong>💰 Costo Real del Empleado: $${totalCost.toLocaleString()}</strong></p>
+    <p style="margin-top:10px; color:#666;">Por cada $100 de salario, la empresa realmente paga $${100 + factor}</p>
+  `;
+  document.getElementById('calc-result').classList.add('show');
+}
+
+// Módulo 3 - Impacto
+const impactScenarios = [
+  { text: "Aumento del 10% del Salario Mínimo Legal", consequences: ["Aumento de Costos Variables y Fijos", "Desplazamiento del PE a la derecha", "Posible inflación o desempleo"] },
+  { text: "Nueva reforma pensional que aumenta el aporte empresa", consequences: ["Aumento de Costos Fijos", "Reducción de margen de ganancia", "Necesidad de mayor productividad"] },
+  { text: "Auditoría de la UGPP revela evasión de prestaciones", consequences: ["Revelación de Pasivo Contingente", "Multas y retroactivos", "Posible destrucción del patrimonio"] }
+];
+
+function renderImpact() {
+  const container = document.getElementById('impact-container');
+  container.innerHTML = '';
+  impactScenarios.forEach((s, i) => {
+    const div = document.createElement('div');
+    div.className = 'exercise-card';
+    div.innerHTML = `
+      <h4>📈 Escenario ${i+1}: ${s.text}</h4>
+      <p style="margin:10px 0;"><strong>Selecciona las consecuencias correctas:</strong></p>
+      <div class="answer-options" style="flex-direction:column;">
+        ${s.consequences.map((c, j) => `
+          <label style="padding:10px; background:white; border-radius:8px; margin:5px 0; cursor:pointer;">
+            <input type="checkbox" onchange="checkImpact(${i}, ${j}, this)"> ${c}
+          </label>
+        `).join('')}
+      </div>
+      <div class="feedback" id="feedback-impact-${i}"></div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function checkImpact(scenarioIdx, consequenceIdx, checkbox) {
+  const feedback = document.getElementById(`feedback-impact-${scenarioIdx}`);
+  feedback.className = 'feedback show correct';
+  feedback.innerHTML = '✅ Correcto. Esta es una consecuencia válida del escenario.';
+}
+
+function calculatePE() {
+  const fixedCosts = parseFloat(document.getElementById('fixedCosts').value);
+  const variableCost = parseFloat(document.getElementById('variableCost').value);
+  const price = parseFloat(document.getElementById('price').value);
+  const factor = parseFloat(document.getElementById('prestacionalFactor').value);
+  const employees = parseFloat(document.getElementById('employees').value);
+  const avgSalary = parseFloat(document.getElementById('avgSalary').value);
+  
+  if ([fixedCosts, variableCost, price, factor, employees, avgSalary].some(isNaN)) {
+    alert('Por favor ingresa todos los valores');
+    return;
+  }
+  
+  // Escenario Informal
+  const peInformal = fixedCosts / (price - variableCost);
+  
+  // Escenario Formal
+  const additionalCost = employees * avgSalary * (factor / 100);
+  const fixedCostsFormal = fixedCosts + additionalCost;
+  const peFormal = fixedCostsFormal / (price - variableCost);
+  
+  document.getElementById('pe-output').innerHTML = `
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+      <div style="padding:15px; background:#ffebee; border-radius:10px; border-left:4px solid #f44336;">
+        <h4> Escenario Informal</h4>
+        <p><strong>Costos Fijos:</strong> $${fixedCosts.toLocaleString()}</p>
+        <p><strong>PE:</strong> ${Math.ceil(peInformal)} unidades</p>
+      </div>
+      <div style="padding:15px; background:#e8f5e9; border-radius:10px; border-left:4px solid #4CAF50;">
+        <h4>🟢 Escenario Formal</h4>
+        <p><strong>Costos Fijos:</strong> $${fixedCostsFormal.toLocaleString()}</p>
+        <p><strong>Costo Adicional:</strong> $${additionalCost.toLocaleString()}</p>
+        <p><strong>PE:</strong> ${Math.ceil(peFormal)} unidades</p>
+      </div>
+    </div>
+    <p style="margin-top:15px; padding:15px; background:#fff3e0; border-radius:10px;">
+      <strong>📊 Diferencia:</strong> Necesitas vender <strong>${Math.ceil(peFormal - peInformal)} unidades más</strong> para cubrir el "costo de la dignidad".
+    </p>
+  `;
+  document.getElementById('pe-result').classList.add('show');
+}
+
+// Módulo 4 - Historia
+const historyQuestions = [
+  { text: "Los trabajadores construyen pirámides bajo amenaza de castigo físico, sin recibir pago.", answer: "Esclavismo" },
+  { text: "Una comunidad agrícola trabaja la tierra colectivamente y comparte la cosecha.", answer: "Comunalismo" },
+  { text: "Un campesino trabaja la tierra del señor feudal y le entrega parte de su cosecha como tributo.", answer: "Feudalismo" },
+  { text: "Un obrero trabaja en una fábrica 8 horas diarias y recibe un salario mensual.", answer: "Capitalismo" },
+  { text: "Los medios de producción (tierra, herramientas) son propiedad privada del dueño.", answer: "Capitalismo" },
+  { text: "No existe propiedad privada; todos los recursos son de la comunidad.", answer: "Comunalismo" }
+];
+
+function renderHistory() {
+  const container = document.getElementById('history-container');
+  container.innerHTML = '';
+  historyQuestions.forEach((q, i) => {
+    const div = document.createElement('div');
+    div.className = 'scenario';
+    div.innerHTML = `
+      <div class="scenario-text"><strong>Situación ${i+1}:</strong> ${q.text}</div>
+      <div class="answer-options">
+        <button class="answer-btn" onclick="checkHistory(${i}, 'Comunalismo', this)">Comunalismo</button>
+        <button class="answer-btn" onclick="checkHistory(${i}, 'Esclavismo', this)">Esclavismo</button>
+        <button class="answer-btn" onclick="checkHistory(${i}, 'Feudalismo', this)">Feudalismo</button>
+        <button class="answer-btn" onclick="checkHistory(${i}, 'Capitalismo', this)">Capitalismo</button>
+      </div>
+      <div class="feedback" id="feedback-hist-${i}"></div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function checkHistory(index, answer, btn) {
+  const question = historyQuestions[index];
+  const feedback = document.getElementById(`feedback-hist-${index}`);
+  const isCorrect = answer === question.answer;
+  
+  if (isCorrect) {
+    btn.classList.add('correct');
+    feedback.className = 'feedback show correct';
+    feedback.innerHTML = `✅ ¡Correcto! Corresponde al ${question.answer}.`;
+  } else {
+    btn.classList.add('wrong');
+    feedback.className = 'feedback show wrong';
+    feedback.innerHTML = `❌ Incorrecto. La respuesta es: <strong>${question.answer}</strong>.`;
+  }
+}
+
+// Navegación
+function showModule(num) {
+  document.querySelectorAll('.module').forEach(m => m.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(`module${num}`).classList.add('active');
+  document.querySelectorAll('.tab-btn')[num-1].classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Inicializar
+renderScenarios();
+renderPayroll();
+renderImpact();
+renderHistory();
+</script>
+</body>
+</html>
